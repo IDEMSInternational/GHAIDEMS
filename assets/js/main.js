@@ -131,6 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
+
   /**
    * Initiate glightbox
    */

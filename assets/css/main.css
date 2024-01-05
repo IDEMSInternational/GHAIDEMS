@@ -570,13 +570,13 @@ section {
 
 .scroll-top i {
   font-size: 24px;
-  color: black;
+  color: #ffffff;
   line-height: 0;
 }
 
 .scroll-top:hover {
   background-color: rgba(var(--primary-color-rgb), 0.8);
-  color: black;
+  color: #ffffff;
 }
 
 .scroll-top.active {

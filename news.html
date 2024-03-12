@@ -31,60 +31,143 @@
   <style>
     .responsive-image {
       width: 100%;
-      max-width: 600px; 
+      max-width: 600px;
       height: auto;
     }
 
-    @media (max-width: 768px) { /* Tablets and smaller */
+    @media (max-width: 768px) {
       .responsive-image {
         max-width: 100%;
       }
     }
 
-    @media (min-width: 769px) and (max-width: 1024px) { /* Small desktops and large tablets */
+    @media (min-width: 769px) and (max-width: 1024px) {
       .responsive-image {
         max-width: 50%;
       }
     }
 
-    @media (min-width: 1025px) { /* Large desktops */
+    @media (min-width: 1025px) {
       .responsive-image {
         max-width: 600px;
       }
     }
-</style>
 
+    /* Sidebar Styles */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 250px;
+      background-color: #f8f9fa;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .content-wrapper {
+      margin-left: 250px;
+    }
+
+    .sidebar-link {
+      display: block;
+      padding: 10px 0;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .sidebar-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 992px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content-wrapper {
+        margin-left: 0;
+      }
+    }
+
+
+
+    /* Search Bar Container */
+    .search-container {
+      margin-bottom: 20px; /* Adds some space below the search bar */
+    }
+
+    /* Styling the search input field */
+    #newsSearch {
+      width: 100%; /* Makes the search bar fit the container width */
+      padding: 10px; /* Adds some padding inside the search bar for text */
+      margin: 0 auto; /* Centers the search bar if it's not full width */
+      font-size: 16px; /* Adjusts the font size for better readability */
+      border: 1px solid #ccc; /* Adds a subtle border around the search bar */
+      border-radius: 25px; /* Rounds the corners of the search bar */
+      outline: none; /* Removes the default focus outline */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a soft shadow for depth */
+    }
+
+    #newsSearch:focus {
+      border-color: #007bff; /* Changes border color when focused to match theme */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Enhances shadow when focused for emphasis */
+    }
+
+    /* Placeholder styling */
+    #newsSearch::placeholder {
+      color: #999; /* Sets a lighter color for the placeholder text */
+    }
+
+  </style>
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-    
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- <h1>GHAIDEMS</h1> -->
-        <img src="assets/img/GHAIDEMS Logo.png" alt="" data-aos="fade-in">
-      </a>
-      <!-- <span>.</span> -->
-
-      <!-- Nav Menu -->
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" style="font-weight: bold; font-size: larger;">Home</a></li>
-          <li><a href="About.html" style="font-weight: bold; font-size: larger;">About Us</a></li>
-          <li><a href="Team.html" style="font-weight: bold; font-size: larger;">Team</a></li>
-          <li><a href="Work.html" style="font-weight: bold; font-size: larger;">How We Work</a></li>
-          <!-- <li><a href="Staff.html" style="font-weight: bold; font-size: larger;">Staffing</a></li> -->
-          <li><a href="Our_works.html" style="font-weight: bold; font-size: larger;">Our Works</a></li>
-          <li><a href="news.html" style="font-weight: bold; font-size: larger; color: #000;" class="active">News</a></li>
-        </ul>
-
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav><!-- End Nav Menu -->
-
+  <br/>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="newsSearch" onkeyup="filterNews()" placeholder="Search news...">
     </div>
-  </header><!-- End Header -->
+
+    <!-- News Links Container -->
+    <div class="news-links" id="newsLinks">
+      <a href="#news-item-2" class="sidebar-link">Role of Mathematics in Technology and Innovation</a>
+      <a href="#news-item-1" class="sidebar-link">The Art of Problem-Solving and Creativity in Mathematics</a>
+      <!-- Additional news items as needed -->
+    </div>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Header -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <img src="assets/img/GHAIDEMS Logo.png" alt="" data-aos="fade-in">
+        </a>
+
+        <!-- Nav Menu -->
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" style="font-weight: bold; font-size: larger;">Home</a></li>
+            <li><a href="About.html" style="font-weight: bold; font-size: larger;">About Us</a></li>
+            <li><a href="Team.html" style="font-weight: bold; font-size: larger;">Team</a></li>
+            <li><a href="Work.html" style="font-weight: bold; font-size: larger;">How We Work</a></li>
+            <li><a href="Our_works.html" style="font-weight: bold; font-size: larger;">Our Works</a></li>
+            <li><a href="news.html" style="font-weight: bold; font-size: larger; color: #000;" class="active">News</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav><!-- End Nav Menu -->
+      </div>
+    </header><!-- End Header -->
 
   <main id="main">
 <br>
@@ -92,9 +175,52 @@
   
   <!-- Team Section - Home Page -->
   <section id="team" class="team">
+
+    <!--  Section news item -->
+    <div id="news-item-2" class="container section-title" data-aos="fade-up">
+
+      <h2> Role of Mathematics in Technology and Innovation </h2>
+      <p class="author-date">March 12, 2024</p>
+      <br/>
+
+      <img src="assets/img/webinar2.jpeg" alt="webinar flyer" class="responsive-image">
+
+      <br/>
+
+        <p style="text-align: justify";> 
+          GHAIDEMS and AMI Ghana present the second of a three-day webinar series to celebrate the International Day of Mathematics (IDM 2024).
+        </p>
+        
+        <br/>
+
+        <p style="text-align: justify";>
+          Join us for insightful discussions, engaging presentations, and a celebration of the beauty and significance of mathematics. Whether 
+          you're a student, educator, parent or simply curious about math, this series is for you!
+        </p>
+
+        <br/>
+
+        <p style="text-align: justify";>  
+         
+          Secure your spot by registering below <strong>if you have not already registered for the first webinar</strong>:
+
+          <br />
+          
+          <a href="https://forms.gle/sQDCKpkhB7Mg1wvg8" target="_blank">https://forms.gle/sQDCKpkhB7Mg1wvg8</a>
+        
+    
+        </p>
+
+        <br/>
+
+        <p  style="text-align: justify";>
+            For more information, contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
+        </p>
+
+    </div><!-- End Section news item --> 
   
-    <!--  Section Title -->
-    <div class="container section-title" data-aos="fade-up">
+    <!--  Section News item -->
+    <div id="news-item-1" class="container section-title" data-aos="fade-up">
 
       <h2> The Art of Problem-Solving and Creativity in Mathematics </h2>
       <p class="author-date">March 9, 2024</p>
@@ -144,7 +270,7 @@
             For more information, please contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
         </p>
 
-    </div><!-- End Section Title --> 
+    </div><!-- End Section news item --> 
   
   </section><!-- End Team Section -->
 
@@ -223,6 +349,21 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    function filterNews() {
+    var input = document.getElementById("newsSearch");
+    var filter = input.value.toUpperCase();
+    var newsLinksContainer = document.getElementById("newsLinks");
+    var newsItems = newsLinksContainer.getElementsByTagName("a");
+    for (var i = 0; i < newsItems.length; i++) {
+      var txtValue = newsItems[i].textContent || newsItems[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        newsItems[i].style.display = "";
+      } else {
+        newsItems[i].style.display = "none";
+      }
+    }
+  }
+  </script>
 </body>
-
 </html>

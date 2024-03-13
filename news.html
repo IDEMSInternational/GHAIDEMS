@@ -122,6 +122,34 @@
       color: #999; /* Sets a lighter color for the placeholder text */
     }
 
+
+
+    .panelist-image {
+      width: 200px; 
+      height: 200px; 
+      border-radius: 50%;
+      object-fit: cover;
+      float: left; /* Initially aligns the image to the left */
+      margin-right: 15px; /* Space between the image and text */
+      margin-bottom: 15px; /* Space below the image */
+      
+    }
+
+    @media (max-width: 768px) {
+      .panelist-image {
+        width: 160px; /* Adjusted size for small screens */
+        height: 160px; /* Adjusted size for small screens */
+        margin: 0 auto 15px; /* Centers the image with auto margins and adds space below */
+        float: none; /* IMPORTANT: Disables float for small screens */
+        display: block; /* Ensures the image is treated as a block-level element for centering */
+      }
+
+      .col-md-2, .col-md-10 {
+        text-align: center; /* Centers the text within these columns on small screens */
+      }
+    }
+
+
   </style>
 </head>
 
@@ -157,6 +185,175 @@
   
   <!-- Team Section - News Page -->
   <section id="team" class="team">
+    <!--  Section news item -->
+    <div id="news-item-3" class="container section-title" data-aos="fade-up">
+
+      <h2> Careers in Mathematics and How Playing Plays a Role </h2>
+      <p class="author-date">March 13, 2024</p>
+      <br/>
+
+      <img src="assets/img/panel_flyer.jpg" alt="Panel Discusion Flyer" class="responsive-image">
+
+      <br />
+
+        <p style="text-align: justify";> 
+          GHAIDEMS and AMI Ghana present the third of a three-day webinar series to celebrate the International Day of Mathematics (IDM 2024).
+        </p>
+        
+        <br/>
+
+        <p style="text-align: justify";>
+          Join us for insightful discussions, engaging presentations, and a celebration of the beauty and significance of mathematics. 
+          Whether you're a student, educator, parent or simply curious about math, this series is for you!
+        </p>
+
+        <br/>
+
+        <h4> About the Panelists </h4>
+        <br />
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <img src="assets/img/franca_.jpeg" alt="Panel Discussion Flyer" class="panelist-image">
+            </div>
+            <div class="col-md-10 col-sm-12">
+              <p style="text-align: left"> <strong> Moderator</strong> - Prof. Franca Hoffmann </p>
+              <p style="text-align: justify";>
+            Franca obtained her master’s in mathematics from Imperial College London (UK) and holds
+            a PhD from the Cambridge Centre for Analysis at University of Cambridge (UK). She held
+            the position of von Kármán instructor at Caltech from 2017 to 2020, then joined University of
+            Bonn (Germany) as Junior Professor and Quantum Leap Africa in Kigali, Rwanda (African
+            Institute for Mathematical Sciences) as AIMS-Carnegie Research Chair in Data Science,
+            before arriving at the California Institute of Technology as Assistant Professor in 2022. She
+            currently serves as AIMS International Scientific Advisor.
+            Franca has co-organized numerous math and science outreach activities across the African
+            continent for over a decade, from primary school activities to advanced research trainings.
+            She serves as Director of the charity Supporting African Mathematics Initiatives (SAMI).
+            </p>
+            </div>
+          </div>
+          
+          <br />
+
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <img src="assets/img/Habiboulaye2.jpg" alt="Panel Discussion Flyer" class="panelist-image">
+            </div>
+            <div class="col-md-10 col-sm-12">
+              <p style="text-align: left"> <strong> Industry Panelist Representative</strong> - Dr. Habiboulaye Amadou Boubacar </p>
+              <p style="text-align: justify";>
+                Dr. Habiboulaye is an experienced and accomplished professional in the field of Artificial Intelligence. He is the head 
+                of the R&D Data Intelligence team at Air Liquide with the qualification of International Senior Expert (ISE). He has a PhD 
+                in Machine Learning & Data Mining and over 16 years of experience in hands-on leading roles in AI. He has been managing the 
+                implementation of various cutting-edge AI solutions through industrial and healthcare projects. He frequently maintains strong 
+                collaborations with academic researchers and industrial experts to explore the next frontiers of AI. Alongside his contributions 
+                in industry, he is also a lecturer for l’Université de Technologie de Troyes (UTT, France), Institut de Sciences Mathématiques et 
+                Physiques (IMSP, Benin) and African Institute of Mathematical Sciences (AIMS). He is also the founder of the non-profit 
+                organization AI4Africa.org.
+            </p>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <img src="assets/img/photo_Herine-profile photo.jpg" alt="Panel Discussion Flyer" class="panelist-image">
+            </div>
+            <div class="col-md-10 col-sm-12">
+              <p style="text-align: left"> <strong> Teacher Panelist Representative</strong> - Dr. Herine Otieno </p>
+              <p style="text-align: justify";>
+                Herine is a Pan African  educationist, researcher and budding Edu-entrepreneur.
+                Her work straddles STEM Education, education technology & higher education teaching, learning & research. A mathematics major at 
+                undergraduate, Herine first masters was in statistics.
+                Her second Masters is in Social Sciences & her PhD is in mathematics education.
+            </p>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <img src="assets/img/peter.jpg" alt="Panel Discussion Flyer" class="panelist-image">
+            </div>
+            <div class="col-md-10 col-sm-12">
+              <p style="text-align: left"> <strong> Parent Panelist Representative</strong> - Dr. Peter Akayuure </p>
+              <p style="text-align: justify";>
+                Peter Akayuure is a devoted parent who is deeply passionate about fostering children's mathematical reasoning, creativity, 
+                and problem-solving skills. Beyond providing academic support, Peter is committed to making his daughters participate in 
+                workshops and events focused on applying mathematical concepts to real-life situations. His daughter was among few children 
+                who participated in the Allotey Maths camp in 2022. Believing in the importance of aligning mathematics learning with cultural 
+                experiences, he advocates for using games, puzzles, stories and real-life scenarios to nurture critical minds of children. 
+                He is also an Associate Professor of Mathematics education at the University of Education Winneba. His research interests include 
+                Geometry and spatial reasoning, assessment literacy, digital technologies, use of indigenous games to teach Mathematics and promote 
+                STEM skills. As a parent and math educator, Peter loves to share his experience on how parents can support in nurturing their wards 
+                to excel in mathematics beyond grades.
+            </p>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <img src="assets/img/Adwoa.JPG" alt="Panel Discussion Flyer" class="panelist-image">
+            </div>
+            <div class="col-md-10 col-sm-12">
+              <p style="text-align: left"> <strong> Student Panelist Representative</strong> - Ms. Adwoa Konadu Appiah </p>
+              <p style="text-align: justify";>
+                Adwoa was a 2016 Allotey Maths Camp participant and a former student of African Science Academy, where 
+                she studied A-level physics, Mathematics and Further Mathematics. She went on to pursue her Barchelor's 
+                degree in AI and Software Engineering at the University of Edinburgh and is currently pursuing a Software 
+                Engineering career with TSB Bank in Scotland.
+
+            </p>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <img src="assets/img/Francis.jpeg" alt="Panel Discussion Flyer" class="panelist-image">
+            </div>
+            <div class="col-md-10 col-sm-12">
+              <p style="text-align: left"> <strong> Education Initiatives Panelist Representative</strong> - Dr. Francis Feehi Torgbor </p>
+              <p style="text-align: justify";>
+                Francis is a climate data analyst with expertise in supporting the communication of climate information to farmers through 
+                the Participatory Integrated Climate Services for Agriculture (PICSA) approach in Africa. He collaborates closely with meteorological 
+                services in Africa to ensure the generation of quality data and climate analyses relevant for PICSA. Additionally, he is a 
+                founding director of GHAIDEMS Ltd and the African Maths Initiative (AMI Ghana), an NGO. He is generally committed to promoting 
+                mathematics education and research for nationwide development, fostering a positive mathematical culture in Africa.
+            </p>
+            </div>
+          </div>
+
+          
+
+
+
+        </div>
+
+        <br/>
+
+        <p style="text-align: justify";>  
+         
+          Secure your spot by registering below <strong>if you have not already registered for the first webinar</strong>:
+
+          <br />
+          
+          <a href="https://forms.gle/sQDCKpkhB7Mg1wvg8" target="_blank">https://forms.gle/sQDCKpkhB7Mg1wvg8</a>
+        </p>
+
+        <br />
+        <p  style="text-align: justify";>
+          For more information, contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
+      </p>
+
+
+    </div><!-- End Section news item --> 
 
     <!--  Section news item -->
     <div id="news-item-2" class="container section-title" data-aos="fade-up">
@@ -185,7 +382,7 @@
         <h4> About the Speaker </h4>
 
         <p  style="text-align: justify";>
-          Divine Puplampu is a Technology Entrepreneur, Software Engineer, and Digital Marketing enthusiast with over 14 years of experience in 
+          Mr. Divine Puplampu is a Technology Entrepreneur, Software Engineer, and Digital Marketing enthusiast with over 14 years of experience in 
           developing innovative digital solutions. He is currently a consulting General Manager at Stratcon Digital; a subsidiary of Stratcon 
           Energy & Trading a major Bulk Oil Distributor in Ghana.
         </p>
@@ -276,7 +473,23 @@
             Join us as we explore the vast world of mathematics through insightful discussions, engaging presentations, and interactive sessions. 
             Our series aims to unveil the beauty and significance of mathematics, demonstrating its pivotal role in innovation, technology, and solving global challenges.
         </p>
-      
+
+        <br />
+        
+        <h4> About the Speaker </h4>
+        <p style="text-align: justify";>
+        Dr. Bernard Oduoku Bainson is a lecturer at the Kwame Nkrumah​ University of Science and Technology, Kumasi and AIMS
+        Ghana. He was also the academic manager of AIMS Ghana.
+        He is a well-trained algebraist who applies the skill of abstraction of core structures, design and
+        verifiable strategies to solving problems. Have had years of experience in teaching across the various
+        levels of education in multicultural environments. Some of which are;
+        Tutoring the School of Mathematical and Computer Sciences, Heriot Watt University where
+        he assisted students with disabilities to access the best quality education provided by the university.
+        He also Volunteered as a Mathematics teacher at Agonaman Senior High School and continues to
+        volunteer to support the Allotey Maths camp. He did his masters at AIMS Ghana and his
+        undergraduate degree at University of Cape Coast.
+        </p>
+              
         <br/>
 
         <p style="text-align: justify";>  
@@ -309,6 +522,7 @@
 
     <!-- News Links Container -->
     <div class="news-links" id="newsLinks">
+      <a href="#news-item-3" class="sidebar-link">Careers in Mathematics and How Playing Plays a Role</a>
       <a href="#news-item-2" class="sidebar-link">Role of Mathematics in Technology and Innovation</a>
       <a href="#news-item-1" class="sidebar-link">The Art of Problem-Solving and Creativity in Mathematics</a>
       <!-- Additional news items as needed -->

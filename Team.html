@@ -24,9 +24,45 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .team-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block; /* Use display block to allow margin auto to center the image */
+      margin: 0 auto 15px; /* Centers the image horizontally and adds space below */
+    }
+  
+    .team-text {
+      text-align: center; /* Centers the text */
+    }
+  
+    @media (max-width: 768px) {
+      .team-image {
+        width: 180px; /* Adjusted size for small screens */
+        height: 180px; /* Adjusted size for small screens */
+      }
+      
+    }
+
+
+    .social-icon {
+      margin: 10px;
+      color: #000; /* Icon color */
+      font-size: 24px; /* Icon size */
+    }
+
+    .social-icon:hover {
+      color: #007bff; /* Icon hover color */
+    }
+
+  </style>
 
 </head>
 
@@ -83,9 +119,9 @@
           <div class="row gy-5">
             <h3>Directors</h3>
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/evelyn.jpeg" class="img-fluid" alt="">
-              </div>
+              
+                <img src="assets/img/team/evelyn.jpeg" class="team-image" alt="">
+             
               <div class="member-info text-center">
                 <h4>Evelyn Arthur-Anto</h4>
                 <span>Director</span>
@@ -100,13 +136,23 @@
                   <a href="javascript:toggleText('link1', 'more1', 'less1')" id="link1">Read More</a>
                   <a href="javascript:toggleText('link1', 'more1', 'less1')" id="less1" style="display:none;">Read Less</a>
               </div>
-
+                <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div><!-- End Team Member -->
   
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/Francis.JPG" class="img-fluid" alt="">
-              </div>
+              
+                <img src="assets/img/team/Francis.JPG" class="team-image" alt="">
+              
               <div class="member-info text-center">
                 <h4>Francis Feehi Torgbor</h4>
                 <span>Director</span>
@@ -123,12 +169,24 @@
                   <a href="javascript:toggleText('link2', 'more2', 'less2')" id="link2">Read More</a>
                   <a href="javascript:toggleText('link2', 'more2', 'less2')" id="less2" style="display:none;">Read Less</a>
               </div>
+
+              <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div><!-- End Team Member -->
   
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/Nana.jpg" class="img-fluid" alt="">
-              </div>
+              
+                <img src="assets/img/team/Nana.jpg" class="team-image" alt="">
+             
               <div class="member-info text-center">
                 <h4>Nana Adjoah Mbroh</h4>
                 <span>Director</span>
@@ -144,13 +202,25 @@
                   <a href="javascript:toggleText('link3', 'more3', 'less3')" id="link3">Read More</a>
                   <a href="javascript:toggleText('link3', 'more3', 'less3')" id="less3" style="display:none;">Read Less</a>
               </div>
+
+              <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div><!-- End Team Member -->
   
             <h3>Management Members</h3>
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/carl. A.JPG" class="img-fluid" alt="">
-              </div>
+            
+                <img  src="assets/img/team/carl. A.JPG" class="team-image" alt="">
+          
               <div class="member-info text-center">
                 <h4>Carl Ayitey Ayayee-Adade</h4>
                 <span>Education Team Lead</span>
@@ -164,12 +234,23 @@
                 <a href="javascript:toggleText('link4', 'more4', 'less4')" id="link4">Read More</a>
                 <a href="javascript:toggleText('link4', 'more4', 'less4')" id="less4" style="display:none;">Read Less</a>
               </div>
+              <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div><!-- End Team Member -->
   
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/gifty.jpeg" class="img-fluid" alt="">
-              </div>
+    
+                <img  src="assets/img/team/gifty.jpeg" class="team-image" alt="">
+            
               <div class="member-info text-center">
                 <h4>Gifty Akoto</h4>
                 <span>Accountant</span>
@@ -181,12 +262,24 @@
                 <a href="javascript:toggleText('link5', 'more5', 'less5')" id="link5">Read More</a>
                 <a href="javascript:toggleText('link5', 'more5', 'less5')" id="less5" style="display:none;">Read Less</a> 
               </div>
+
+              <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div><!-- End Team Member -->
   
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/jb_profile.jpg" class="img-fluid" alt="">
-              </div>
+
+                <img src="assets/img/team/jb_profile.jpg" class="team-image" alt="">
+
               <div class="member-info text-center">
                 <h4>John Bagiliko</h4>
                 <span>Technology Team Lead</span>
@@ -198,12 +291,24 @@
                   <a href="javascript:toggleText('link6', 'more6', 'less6')" id="link6">Read More</a>
                   <a href="javascript:toggleText('link6', 'more6', 'less6')" id="less6" style="display:none;">Read Less</a> 
               </div>
+
+              <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div><!-- End Team Member -->
   
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/Nicholas.jpg" class="img-fluid" alt="">
-              </div>
+             
+                <img src="assets/img/team/Nicholas.jpg" class="team-image" alt="">
+             
               <div class="member-info text-center">
                 <h4>Nicholas Opoku</h4>
                 <span>Data Team Lead</span>
@@ -215,12 +320,24 @@
               <a href="javascript:toggleText('link7', 'more7', 'less7')" id="link7">Read More</a>
               <a href="javascript:toggleText('link7', 'more7', 'less7')" id="less7" style="display:none;">Read Less</a> 
               </div>
+              
+              <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div><!-- End Team Member -->
   
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/Patrick.JPG" class="img-fluid" alt="">
-              </div>
+              
+                <img src="assets/img/team/Patrick.JPG" class="team-image" alt="">
+             
               <div class="member-info text-center">
                 <h4>Patrick Banahene</h4>
                 <span>Agriculture Team  Lead</span>
@@ -232,12 +349,24 @@
                   <a href="javascript:toggleText('link8', 'more8', 'less8')" id="link8">Read More</a>
                   <a href="javascript:toggleText('link8', 'more8', 'less8')" id="less8" style="display:none;">Read Less</a>  
               </div>
+
+              <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div><!-- End Team Member -->
   
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-              <div class="member-img">
-                <img style="height: 220px;" src="assets/img/team/Derick.jpg" class="img-fluid" alt="">
-              </div>
+              
+                <img src="assets/img/team/Derick.jpg" class="team-image" alt="">
+             
               <div class="member-info text-center">
                 <h4>Derrick Agorhom</h4>
                 <span>Intern</span>
@@ -248,6 +377,18 @@
                   </div>
                   <a href="javascript:toggleText('link9', 'more9', 'less9')" id="link9">Read More</a>
                   <a href="javascript:toggleText('link9', 'more9', 'less9')" id="less9" style="display:none;">Read Less</a>  
+              </div>
+
+              <div class="social-icons-container text-center">
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
               </div>
             </div><!-- End Team Member -->
   

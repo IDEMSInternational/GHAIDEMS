@@ -28,6 +28,22 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Card hover effect */
+    .card:hover {
+      transform: scale(1.05); /* Slightly expand the card */
+      transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+      border-color: #008B8B; /* Change border color to red on hover */
+    }
+
+    .card:hover .card-title,
+    .card:hover .card-text {
+      color: #008B8B; /* Change text color to green on hover */
+      transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+    }
+
+  </style>
+
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -70,79 +86,12 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="container section-title" data-aos="fade-up">
           <h2>About Us</h2>
-            <p style="text-align: justify;">GHAIDEMS is a multi-disciplinary team with long term experience working in education and development, who are looking to have a greater impact across Africa. Our origins in academia have given us an appreciation of deep understanding and knowledge, which translates into a preference for long term collaborations rather than quick fixes.
+            <p style="text-align: justify;">GHAIDEMS is a multi-disciplinary team with long term experience working in education and development, 
+              who are looking to have a greater impact across Africa. Our origins in academia have given us an appreciation of deep understanding 
+              and knowledge, which translates into a preference for long term collaborations rather than quick fixes.
               Our drive for impact leads us to search for practical solutions rather than ivory tower studies.
-              
-              GHAIDEMS is legally registered in Ghana as a for-profit organization, however our structure and constitution defines us as a sort of social enterprise. This enables us to be defined by the communities we serve while doing business commercially. Serving a community gives us a sense of purpose beyond our own as individuals or a company. 
+            </p>
         </div><!-- End Section Title -->    
-      </div>
-      
-      <br>
-      
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <!-- <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/innovation.jpg" alt="" class="img-fluid">
-              </div>
-              <p class="title"><a href="#" class="stretched-link">Innovation</a></p>
-              <h6 class="title">
-                <a>Our approach is to strive for innovations, embracing contextualised problem solving which we strive to work with partners to build capacity to ensure sustainability.
-                </a>
-              </h6>
-            </article>
-          </div> --> 
-          <!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article>
-            <div class="card" style="width: 23rem; height: 11cm;">
-                <img class="card-img-top" style="height: 7cm;" src="assets/img/dev3.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title" style="color: #008B8B;">Innovation</h4>
-                <p class="card-text"> We strive for innovations, embracing contextualised problem solving which we strive to work with partners to build capacity to ensure sustainability.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-              </div>
-            </div>
-            </article>
-          </div><!-- End post list item -->
-
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article>
-              <div class="card" style="width: 23rem; height: 11cm;">
-                <img class="card-img-top" style="height: 7cm;" src="assets/img/education.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title" style="color: #008B8B;">Education</h4>
-                <p class="card-text">We aim to impact professional and academic outcomes of both formal and informal education, especially in difficult environments.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-              </div>
-            </div>
-            </article>
-          </div><!-- End post list item -->
-
-
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <article>
-            <div class="card" style="width: 23rem; height: 11cm;">
-              <img class="card-img-top" style="height: 7cm;" src="assets/img/mathematics.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title" style="color: #008B8B;">Mathematical Sciences</h4>
-              <p class="card-text">We aim to contribute to the strengthening of mathematical sciences, as a discipline and a tool for social change.</p>
-              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-          </div>
-          </article>
-        </div><!-- End post list item -->
-
-
-        </div><!-- End recent posts list -->
-
       </div>
 
     </section><!-- End About Section -->

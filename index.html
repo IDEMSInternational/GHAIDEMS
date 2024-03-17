@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>GHAIDEMS</title>
@@ -33,204 +32,224 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Sidebar Styles */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      right: 0; /* Changed from left to right */
-      bottom: 0;
-      width: 250px;
-      background-color: #f8f9fa;
-      padding: 20px;
-      overflow-y: auto;
-    }
 
-        .content-wrapper {
-      margin-right: 250px; /* Adds margin to the right instead of left */
-    }
-
-    .sidebar-link {
-      display: block;
-      padding: 10px 0;
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .sidebar-link:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 992px) {
-      .sidebar {
-        position: relative; /* Change positioning on smaller screens */
-        width: 100%; /* Make the sidebar take full width */
-        height: auto; /* Adjust height automatically */
-        z-index: 1; /* Ensure sidebar layers correctly if needed */
-      }
-
-      .content-wrapper, .header {
-        margin-right: 0; /* Remove right margin */
-        margin-left: 0; /* Ensure there's no left margin pushing content off-screen */
-      }
-    }
-
-
-    /* Card hover effect */
-    .card:hover {
-      transform: scale(1.05); /* Slightly expand the card */
-      transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
-      border-color: #008B8B; 
-    }
-
-    .card:hover .card-title,
-    .card:hover .card-text {
-      color: #008B8B; /* Change text color to green on hover */
-      transition: color 0.3s ease-in-out; /* Smooth transition for text color */
-    }
-
-
-
-    .service-icon {
-    font-size: 5rem; /* Adjust this value to set your desired icon size */
-    color: #008B8B; /* Example color - adjust as needed */
+@media (max-width: 992px) {
+  .content-wrapper {
+    padding-right: 15px; /* Reset padding for smaller screens */
   }
+}
+
+/* Card Styles */
+.card {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Slight scale up */
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+  color: #008B8B; /* Change text color on hover */
+}
+
+
+
+@media (min-width: 992px) { /* Adjust breakpoint as needed */
+  .card {
+    padding: 7px; /* Increase padding */
+    margin: 7px; /* Increase margin */
+    display: flex; 
+    flex-direction: column; 
+    justify-content:space-around; 
+  }
+}
+
+
+
+.service-icon {
+    font-size: 5rem; 
+    color: #008B8B; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+
+  /* Default styling for larger screens */
+.responsive-text {
+  text-align: center; 
+  font-size: 48px; /* Large size for large screens */
+}
+
+/* Media query for small screens (phones) */
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: 24px; /* Smaller font size for small screens */
+  }
+}
+
+
   </style>
 </head>
-
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
-  <br/>
-  <!-- Main Content Wrapper -->
-  <div class="content-wrapper">
-    <!-- Header -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
-      <div class="container-fluid d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-          <img src="assets/img/GHAIDEMS Logo.png" alt="" data-aos="fade-in">
-        </a>
+  <br />
+  <div class="container-fluid">  
+    <div class="row">
+      <!-- Page Content -->
+      <div class="col-12 col-md-10">
+        <!-- Page content here -->
+        <div class="content-wrapper">
+            <!-- Header -->
+            <header id="header" class="header fixed-top d-flex align-items-center">
+              <div class="container-fluid d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                  <img src="assets/img/GHAIDEMS Logo.png" alt="" data-aos="fade-in">
+                </a>
+        
+                <!-- Nav Menu -->
+                <nav id="navmenu" class="navmenu">
+                  <ul>
+                    <li><a href="index.html" style="font-weight: bold; font-size: larger; color: #000;" class="active">Home</a></li>
+                    <li><a href="About.html" style="font-weight: bold; font-size: larger;">About Us</a></li>
+                    <li><a href="Team.html" style="font-weight: bold; font-size: larger;">Team</a></li>
+                    <li><a href="Work.html" style="font-weight: bold; font-size: larger;">How We Work</a></li>
+                    <li><a href="Our_works.html" style="font-weight: bold; font-size: larger;">Our Works</a></li>
+                    <li><a href="news.html" style="font-weight: bold; font-size: larger;">News</a></li>
+                  </ul>
+                  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav><!-- End Nav Menu -->
+              </div>
+            </header><!-- End Header -->
+        </div>
+        
+          <main id="main">
+            <br />
+            <br />
+            <br />
 
-        <!-- Nav Menu -->
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html" style="font-weight: bold; font-size: larger; color: #000;" class="active">Home</a></li>
-            <li><a href="About.html" style="font-weight: bold; font-size: larger;">About Us</a></li>
-            <li><a href="Team.html" style="font-weight: bold; font-size: larger;">Team</a></li>
-            <li><a href="Work.html" style="font-weight: bold; font-size: larger;">How We Work</a></li>
-            <li><a href="Our_works.html" style="font-weight: bold; font-size: larger;">Our Works</a></li>
-            <li><a href="news.html" style="font-weight: bold; font-size: larger;">News</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav><!-- End Nav Menu -->
+          
+        <section id="about" class="about">
+        
+            <div class="container" id="confetti-hover" data-aos="fade-up" data-aos-delay="100"> 
+              
+              <div class="row">
+                <div class="col-lg-10">
+                  <p data-aos="fade-up" data-aos-delay="200" class="responsive-text"> <strong>Ghana Innovations in Development, Education and the Mathematical Sciences</strong> </p>
+                </div>
+        
+                <p style="text-align: justify;">
+                  GHAIDEMS is legally registered in Ghana as a for-profit organization, however our structure and constitution defines us as a sort of
+                   social enterprise. This enables us to be defined by the communities we serve while doing business commercially. Serving a community
+                   gives us a sense of purpose beyond our own as individuals or a company. 
+                </p>
+        
+                </div> 
+            </div>
+        
+          </section>
+        
+        
+          <section id="services" class="services">
+            <div class="container">
+        
+              <div class="row gy-4">
+                
+              <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                <article>
+                    <div class="card" style="height: 8cm;">
+                      <div class="card-body text-center">
+                        <i class="fas fa-rocket service-icon"></i>
+                        <h4 class="card-title" style="color: #008B8B;">Innovation</h4>
+                        <p class="card-text">We strive for innovations, embracing contextualised problem 
+                          solving which we strive to work with partners to build capacity to ensure sustainability.</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+        
+                <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                  <article>
+                    <div class="card" style="height: 8cm;">
+                      <div class="card-body text-center">
+                        <i class="bi bi-globe service-icon" style="font-size: 4rem; color: #008B8B;"></i> 
+                        <h4 class="card-title" style="color: #008B8B;">Development</h4>
+                        <p class="card-text">In our work, we strive to work with partners towards sustainable 
+                          development of Africa through capacity building. 
+
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                  <article>
+                    <div class="card" style="height: 8cm;">
+                      <div class="card-body text-center">
+                        <i class="fas fa-book-open service-icon"></i>
+                        <h4 class="card-title" style="color: #008B8B;">Education</h4>
+                        <p class="card-text">We aim to impact professional and academic outcomes of both formal and informal education, especially in difficult environments.</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                  <article>
+                    <div class="card" style=" height: 8cm;">
+                      <div class="card-body text-center">
+                        <i class="fas fa-calculator service-icon"></i> 
+                        <h4 class="card-title" style="color: #008B8B;">Mathematical Sciences</h4>
+                        <p class="card-text">We aim to contribute to the strengthening of mathematical sciences, as a discipline and a tool for social change.</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                
+                
+              </div>
+        
+            </div>
+        
+          </section><!-- End Services Section -->
       </div>
-    </header><!-- End Header -->
-    </div>
-  <main id="main">
-<br />
-<br />
-  
-<section id="about" class="about">
-
-    <div class="container" id="confetti-hover" data-aos="fade-up" data-aos-delay="100"> 
       
-      <div class="row">
-        <div class="col-lg-10">
-          <p data-aos="fade-up" data-aos-delay="200"> <strong>Ghana Innovations in Development, Education and the Mathematical Sciences</strong> </p>
-        </div>
-
-        <p style="text-align: justify;">
-          GHAIDEMS is legally registered in Ghana as a for-profit organization, however our structure and constitution defines us as a sort of
-           social enterprise. This enables us to be defined by the communities we serve while doing business commercially. Serving a community
-           gives us a sense of purpose beyond our own as individuals or a company. 
-        </p>
-
-        </div> 
-    </div>
-
-  </section>
-
-
-  <section id="services" class="services">
-    <div class="container">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-          <article>
-            <div class="card" style="height: 7cm;">
-              <div class="card-body text-center">
-                <i class="fas fa-rocket service-icon"></i>
-                <h4 class="card-title" style="color: #008B8B;">Innovation</h4>
-                <p class="card-text">We strive for innovations, embracing contextualised problem 
-                  solving which we strive to work with partners to build capacity to ensure sustainability.</p>
-              </div>
+      <!-- Sidebar -->
+      <div class="col-12 col-md-2">
+            <br />
+            <br />
+            <br />
+           
+            <div class="sidebar-sticky">
+                
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                <strong>Recent News</strong>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="https://www.ghaidems.org/news.html#news-item-3">
+                    Careers in Mathematics and How Playing Plays a Role
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="https://www.ghaidems.org/news.html#news-item-2">
+                    Role of Mathematics in Technology and Innovation
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="https://www.ghaidems.org/news.html#news-item-1">
+                    The Art of Problem-Solving and Creativity in Mathematics
+                </a>
+                </li>
+            </ul>
             </div>
-          </article>
         </div>
-
-        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-          <article>
-            <div class="card" style="height: 7cm;">
-              <div class="card-body text-center">
-                <i class="bi bi-globe service-icon" style="font-size: 4rem; color: #008B8B;"></i> 
-                <h4 class="card-title" style="color: #008B8B;">Development</h4>
-                <p class="card-text">We work with partners towards the development of Ghana, Africa, and beyond.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-        
-        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-          <article>
-            <div class="card" style="height: 7cm;">
-              <div class="card-body text-center">
-                <i class="fas fa-book-open service-icon"></i>
-                <h4 class="card-title" style="color: #008B8B;">Education</h4>
-                <p class="card-text">We aim to impact professional and academic outcomes of both formal and informal education, especially in difficult environments.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-        
-        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-          <article>
-            <div class="card" style=" height: 7cm;">
-              <div class="card-body text-center">
-                <i class="fas fa-calculator service-icon"></i> 
-                <h4 class="card-title" style="color: #008B8B;">Mathematical Sciences</h4>
-                <p class="card-text">We aim to contribute to the strengthening of mathematical sciences, as a discipline and a tool for social change.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-        
-      </div>
-
-    </div>
-
-  </section><!-- End Services Section -->
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <br />
-    <br />
-    <br />
-    <br />
-    <!-- Search Bar -->
-    <div>
-      <strong> Recent news </strong> 
-    </div>
-
-    <!-- News Links Container -->
-    <div class="news-links">
-      <a href="https://www.ghaidems.org/news.html#news-item-3" class="sidebar-link">Careers in Mathematics and How Playing Plays a Role</a>
-      <a href="https://www.ghaidems.org/news.html#news-item-2" class="sidebar-link">Role of Mathematics in Technology and Innovation</a>
-      <a href="https://www.ghaidems.org/news.html#news-item-1" class="sidebar-link">The Art of Problem-Solving and Creativity in Mathematics</a>
+  
     </div>
   </div>
-   
-  </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
 
     <div class="container footer-top">
       <div class="row gy-4">

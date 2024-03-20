@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>GHAIDEMS</title>
@@ -24,513 +23,544 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    .responsive-image {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-    }
 
-    @media (max-width: 768px) {
-      .responsive-image {
-        max-width: 100%;
-      }
-    }
+/* Base styles */
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
 
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .responsive-image {
-        max-width: 50%;
-      }
-    }
+/* Responsive images */
+.responsive-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
 
-    @media (min-width: 1025px) {
-      .responsive-image {
-        max-width: 600px;
-      }
-    }
+@media (max-width: 768px) {
+  .responsive-image {
+    max-width: 100%;
+  }
+}
 
-    /* Sidebar Styles */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      right: 0; /* Changed from left to right */
-      bottom: 0;
-      width: 250px;
-      background-color: #f8f9fa;
-      padding: 20px;
-      overflow-y: auto;
-    }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .responsive-image {
+    max-width: 50%;
+  }
+}
 
-        .content-wrapper {
-      margin-right: 250px; /* Adds margin to the right instead of left */
-    }
+@media (min-width: 1025px) {
+  .responsive-image {
+    max-width: 600px;
+  }
+}
 
-    .sidebar-link {
-      display: block;
-      padding: 10px 0;
-      color: #007bff;
-      text-decoration: none;
-    }
+/* Panelist images */
+.panelist-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
 
-    .sidebar-link:hover {
-      text-decoration: underline;
-    }
+@media (max-width: 768px) {
+  .panelist-image {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 15px;
+    float: none;
+    display: block;
+  }
+}
 
-    @media (max-width: 992px) {
-      .sidebar {
-        position: relative; /* Change positioning on smaller screens */
-        width: 100%; /* Make the sidebar take full width */
-        height: auto; /* Adjust height automatically */
-        z-index: 1; /* Ensure sidebar layers correctly if needed */
-      }
+/* For very large screens such as TV */
+@media (min-width: 1920px) {
+  .panelist-image {
+    width: 170px; 
+    height: 170px; 
+  }
+}
 
-      .content-wrapper, .header {
-        margin-right: 0; /* Remove right margin */
-        margin-left: 0; /* Ensure there's no left margin pushing content off-screen */
-      }
-    }
+/* Search bar styles */
+.search-container {
+  margin-bottom: 20px;
+}
 
+#newsSearch {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-    /* Search Bar Container */
-    .search-container {
-      margin-bottom: 20px; /* Adds some space below the search bar */
-    }
+#newsSearch:focus {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 
-    /* Styling the search input field */
-    #newsSearch {
-      width: 100%; /* Makes the search bar fit the container width */
-      padding: 10px; /* Adds some padding inside the search bar for text */
-      margin: 0 auto; /* Centers the search bar if it's not full width */
-      font-size: 16px; /* Adjusts the font size for better readability */
-      border: 1px solid #ccc; /* Adds a subtle border around the search bar */
-      border-radius: 25px; /* Rounds the corners of the search bar */
-      outline: none; /* Removes the default focus outline */
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a soft shadow for depth */
-    }
+#newsSearch::placeholder {
+  color: #999;
+}
 
-    #newsSearch:focus {
-      border-color: #007bff; /* Changes border color when focused to match theme */
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Enhances shadow when focused for emphasis */
-    }
+/* Adjustments for the content and sidebar on larger screens */
+@media (min-width: 1920px) {
+  .content-wrapper, .sidebar-sticky {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 
-    /* Placeholder styling */
-    #newsSearch::placeholder {
-      color: #999; /* Sets a lighter color for the placeholder text */
-    }
+  .sidebar-sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+  }
+}
 
-    .panelist-image {
-      width: 200px; 
-      height: 200px; 
-      border-radius: 50%;
-      object-fit: cover;
-      float: left; /* Initially aligns the image to the left */
-      margin-right: 15px; /* Space between the image and text */
-      margin-bottom: 15px; /* Space below the image */
-      
-    }
-
-    @media (max-width: 768px) {
-      .panelist-image {
-        width: 160px; /* Adjusted size for small screens */
-        height: 160px; /* Adjusted size for small screens */
-        margin: 0 auto 15px; /* Centers the image with auto margins and adds space below */
-        float: none; /* IMPORTANT: Disables float for small screens */
-        display: block; /* Ensures the image is treated as a block-level element for centering */
-      }
-
-      .col-md-2, .col-md-10 {
-        text-align: center; /* Centers the text within these columns on small screens */
-      }
-    }
 
 
   </style>
 </head>
-
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
-  <br/>
-  <!-- Main Content Wrapper -->
-  <div class="content-wrapper">
-    <!-- Header -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
-      <div class="container-fluid d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-          <img src="assets/img/GHAIDEMS Logo.png" alt="" data-aos="fade-in">
-        </a>
-
-        <!-- Nav Menu -->
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html" style="font-weight: bold; font-size: larger;">Home</a></li>
-            <li><a href="About.html" style="font-weight: bold; font-size: larger;">About Us</a></li>
-            <li><a href="Team.html" style="font-weight: bold; font-size: larger;">Team</a></li>
-            <li><a href="Work.html" style="font-weight: bold; font-size: larger;">How We Work</a></li>
-            <li><a href="Our_works.html" style="font-weight: bold; font-size: larger;">Our Works</a></li>
-            <li><a href="news.html" style="font-weight: bold; font-size: larger; color: #000;" class="active">News</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav><!-- End Nav Menu -->
-    </div>
-    </header><!-- End Header -->
-    </div>
-  <main id="main">
-<br>
-<br>
-  
-  <!-- Team Section - News Page -->
-  <section id="team" class="team">
-    <!--  Section news item -->
-    <div id="news-item-3" class="container section-title" data-aos="fade-up">
-
-      <h2> Careers in Mathematics and How Playing Plays a Role </h2>
-      <p class="author-date">March 13, 2024</p>
-      <br/>
-
-      <img src="assets/img/panel_flyer.jpg" alt="Panel Discusion Flyer" class="responsive-image">
-
-      <br />
-
-        <p style="text-align: justify";> 
-          GHAIDEMS and AMI Ghana present the third of a three-day webinar series to celebrate the International Day of Mathematics (IDM 2024).
-        </p>
+  <br />
+  <div class="container-fluid">  
+    <div class="row">
+      <!-- Page Content -->
+      <div class="col-12 col-md-10">
+        <!-- Page content here -->
+        <div class="content-wrapper">
+            <!-- Header -->
+            <header id="header" class="header fixed-top d-flex align-items-center">
+              <div class="container-fluid d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                  <img src="assets/img/GHAIDEMS Logo.png" alt="" data-aos="fade-in">
+                </a>
         
-        <br/>
-
-        <p style="text-align: justify";>
-          Join us for insightful discussions, engaging presentations, and a celebration of the beauty and significance of mathematics. 
-          Whether you're a student, educator, parent or simply curious about math, this series is for you!
-        </p>
-
-        <br/>
-
-        <h4> About the Panelists </h4>
-        <br />
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2 col-sm-12">
-              <img src="assets/img/franca_.jpeg" alt="Panel Discussion Flyer" class="panelist-image">
-            </div>
-            <div class="col-md-10 col-sm-12">
-              <p style="text-align: left"> <strong> Moderator</strong> - Prof. Franca Hoffmann </p>
-              <p style="text-align: justify";>
-            Franca obtained her master’s in mathematics from Imperial College London (UK) and holds
-            a PhD from the Cambridge Centre for Analysis at University of Cambridge (UK). She held
-            the position of von Kármán instructor at Caltech from 2017 to 2020, then joined University of
-            Bonn (Germany) as Junior Professor and Quantum Leap Africa in Kigali, Rwanda (African
-            Institute for Mathematical Sciences) as AIMS-Carnegie Research Chair in Data Science,
-            before arriving at the California Institute of Technology as Assistant Professor in 2022. She
-            currently serves as AIMS International Scientific Advisor.
-            Franca has co-organized numerous math and science outreach activities across the African
-            continent for over a decade, from primary school activities to advanced research trainings.
-            She serves as Director of the charity Supporting African Mathematics Initiatives (SAMI).
-            </p>
-            </div>
-          </div>
-          
-          <br />
-
-          <div class="row">
-            <div class="col-md-2 col-sm-12">
-              <img src="assets/img/Habiboulaye2.jpg" alt="Panel Discussion Flyer" class="panelist-image">
-            </div>
-            <div class="col-md-10 col-sm-12">
-              <p style="text-align: left"> <strong> Industry Panelist Representative</strong> - Dr. Habiboulaye Amadou Boubacar </p>
-              <p style="text-align: justify";>
-                Dr. Habiboulaye is an experienced and accomplished professional in the field of Artificial Intelligence. He is the head 
-                of the R&D Data Intelligence team at Air Liquide with the qualification of International Senior Expert (ISE). He has a PhD 
-                in Machine Learning & Data Mining and over 16 years of experience in hands-on leading roles in AI. He has been managing the 
-                implementation of various cutting-edge AI solutions through industrial and healthcare projects. He frequently maintains strong 
-                collaborations with academic researchers and industrial experts to explore the next frontiers of AI. Alongside his contributions 
-                in industry, he is also a lecturer for l’Université de Technologie de Troyes (UTT, France), Institut de Sciences Mathématiques et 
-                Physiques (IMSP, Benin) and African Institute of Mathematical Sciences (AIMS). He is also the founder of the non-profit 
-                organization AI4Africa.org.
-            </p>
-            </div>
-          </div>
-
-          <br />
-
-          <div class="row">
-            <div class="col-md-2 col-sm-12">
-              <img src="assets/img/photo_Herine-profile photo.jpg" alt="Panel Discussion Flyer" class="panelist-image">
-            </div>
-            <div class="col-md-10 col-sm-12">
-              <p style="text-align: left"> <strong> Teacher Panelist Representative</strong> - Dr. Herine Otieno </p>
-              <p style="text-align: justify";>
-                Herine is a Pan African  educationist, researcher and budding Edu-entrepreneur.
-                Her work straddles STEM Education, education technology & higher education teaching, learning & research. A mathematics major at 
-                undergraduate, Herine first masters was in statistics.
-                Her second Masters is in Social Sciences & her PhD is in mathematics education.
-            </p>
-            </div>
-          </div>
-
-          <br />
-
-          <div class="row">
-            <div class="col-md-2 col-sm-12">
-              <img src="assets/img/peter.jpg" alt="Panel Discussion Flyer" class="panelist-image">
-            </div>
-            <div class="col-md-10 col-sm-12">
-              <p style="text-align: left"> <strong> Parent Panelist Representative</strong> - Dr. Peter Akayuure </p>
-              <p style="text-align: justify";>
-                Peter Akayuure is a devoted parent who is deeply passionate about fostering children's mathematical reasoning, creativity, 
-                and problem-solving skills. Beyond providing academic support, Peter is committed to making his daughters participate in 
-                workshops and events focused on applying mathematical concepts to real-life situations. His daughter was among few children 
-                who participated in the Allotey Maths camp in 2022. Believing in the importance of aligning mathematics learning with cultural 
-                experiences, he advocates for using games, puzzles, stories and real-life scenarios to nurture critical minds of children. 
-                He is also an Associate Professor of Mathematics education at the University of Education Winneba. His research interests include 
-                Geometry and spatial reasoning, assessment literacy, digital technologies, use of indigenous games to teach Mathematics and promote 
-                STEM skills. As a parent and math educator, Peter loves to share his experience on how parents can support in nurturing their wards 
-                to excel in mathematics beyond grades.
-            </p>
-            </div>
-          </div>
-
-          <br />
-
-          <div class="row">
-            <div class="col-md-2 col-sm-12">
-              <img src="assets/img/Adwoa.JPG" alt="Panel Discussion Flyer" class="panelist-image">
-            </div>
-            <div class="col-md-10 col-sm-12">
-              <p style="text-align: left"> <strong> Student Panelist Representative</strong> - Ms. Adwoa Konadu Appiah </p>
-              <p style="text-align: justify";>
-                Adwoa was a 2016 Allotey Maths Camp participant and a former student of African Science Academy, where 
-                she studied A-level physics, Mathematics and Further Mathematics. She went on to pursue her Barchelor's 
-                degree in AI and Software Engineering at the University of Edinburgh and is currently pursuing a Software 
-                Engineering career with TSB Bank in Scotland.
-
-            </p>
-            </div>
-          </div>
-
-          <br />
-
-          <div class="row">
-            <div class="col-md-2 col-sm-12">
-              <img src="assets/img/Francis.jpeg" alt="Panel Discussion Flyer" class="panelist-image">
-            </div>
-            <div class="col-md-10 col-sm-12">
-              <p style="text-align: left"> <strong> Education Initiatives Panelist Representative</strong> - Dr. Francis Feehi Torgbor </p>
-              <p style="text-align: justify";>
-                Francis is a climate data analyst with expertise in supporting the communication of climate information to farmers through 
-                the Participatory Integrated Climate Services for Agriculture (PICSA) approach in Africa. He collaborates closely with meteorological 
-                services in Africa to ensure the generation of quality data and climate analyses relevant for PICSA. Additionally, he is a 
-                founding director of GHAIDEMS Ltd and the African Maths Initiative (AMI Ghana), an NGO. He is generally committed to promoting 
-                mathematics education and research for nationwide development, fostering a positive mathematical culture in Africa.
-            </p>
-            </div>
-          </div>
-
-          
-
-
-
+                <!-- Nav Menu -->
+                <nav id="navmenu" class="navmenu">
+                  <ul>
+                    <li><a href="index.html" style="font-weight: bold; font-size: larger; color: #000;" class="active">Home</a></li>
+                    <li><a href="About.html" style="font-weight: bold; font-size: larger;">About Us</a></li>
+                    <li><a href="Team.html" style="font-weight: bold; font-size: larger;">Team</a></li>
+                    <li><a href="Work.html" style="font-weight: bold; font-size: larger;">How We Work</a></li>
+                    <li><a href="Our_works.html" style="font-weight: bold; font-size: larger;">Our Works</a></li>
+                    <li><a href="news.html" style="font-weight: bold; font-size: larger;">News</a></li>
+                  </ul>
+                  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav><!-- End Nav Menu -->
+              </div>
+            </header><!-- End Header -->
         </div>
-
-        <br/>
-
-        <p style="text-align: justify";>  
-         
-          Secure your spot by registering below <strong>if you have not already registered for the first webinar</strong>:
-
-          <br />
-          
-          <a href="https://forms.gle/sQDCKpkhB7Mg1wvg8" target="_blank">https://forms.gle/sQDCKpkhB7Mg1wvg8</a>
-        </p>
-
-        <br />
-        <p  style="text-align: justify";>
-          For more information, contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
-      </p>
-
-
-    </div><!-- End Section news item --> 
-
-    <!--  Section news item -->
-    <div id="news-item-2" class="container section-title" data-aos="fade-up">
-
-      <h2> Role of Mathematics in Technology and Innovation </h2>
-      <p class="author-date">March 12, 2024</p>
-      <br/>
-
-      <img src="assets/img/webinar2.jpeg" alt="webinar flyer" class="responsive-image">
-
-      <br/>
-
-        <p style="text-align: justify";> 
-          GHAIDEMS and AMI Ghana present the second of a three-day webinar series to celebrate the International Day of Mathematics (IDM 2024).
-        </p>
         
-        <br/>
+          <main id="main">
+            <br />
+            <br />
+            <br />
 
-        <p style="text-align: justify";>
-          Join us for insightful discussions, engaging presentations, and a celebration of the beauty and significance of mathematics. Whether 
-          you're a student, educator, parent or simply curious about math, this series is for you!
-        </p>
-
-        <br/>
-
-        <h4> About the Speaker </h4>
-
-        <p  style="text-align: justify";>
-          Mr. Divine Puplampu is a Technology Entrepreneur, Software Engineer, and Digital Marketing enthusiast with over 14 years of experience in 
-          developing innovative digital solutions. He is currently a consulting General Manager at Stratcon Digital; a subsidiary of Stratcon 
-          Energy & Trading a major Bulk Oil Distributor in Ghana.
-        </p>
-
-        <br/>
-
-        <p  style="text-align: justify";>
-          He is also the co-founder and Tech Lead at Stimuluz Technologies, where he leads a team of 8-developers to develop digital solutions. 
-          He also had a stint at the University of Ghana Computing Systems (UGCS) during his National Service. At UGCS, he was part of the 5-man team 
-          that deployed the Sakai E-learning System at the University of Ghana; the e-learning tool that became indispensable during the height of the COVID-19 
-          pandemic. 
-        </p>
-
-        <br/>
-
-        <p  style="text-align: justify";>
-          Passionate about empowering the youth, particularly the Christian community, Divine regularly conducts free training sessions on leveraging 
-          social media for positive impact. He also dedicates his time and skills as an IT Associate volunteer for several non-governmental organizations, 
-          including the Ghana Community Radio Network (GCRN), Nneka Youth Foundation, FactSpace West Africa and the Rocky Dawuni Foundation. Divine also 
-          volunteers as a Digital Media Enabler at the Trinity Baptist Church, Ghana, where he applies his expertise to enhance the church's digital presence. 
-        </p>
-
-        <br/>
-
-        <p  style="text-align: justify";>
-          With a strong commitment to utilizing technology to solve everyday challenges, Divine has contributed to over 100 digital projects for 
-          various brands and startups across Africa. His client portfolio includes prominent organizations such as the Africa Continental Free Trade 
-          Area Secretariat (AfCFTA), Center for Democratic Development (CDD), Prudential Life Insurance, Africa World Airlines, Nyaho Medical Centre, 
-          Noguchi Memorial Institute for Medical Research, University of Ghana Business School, Omni Media (CitiFM & CitiTV), Ghana Chamber of Bulk 
-          Oil Distributors (CBoD), Ghana Standards Authority, Ghana Climate Innovation Center, Petroleum Commission of Ghana, Ghana Tourism Authority, 
-          Stratcon Energy & Trading Limited, Ghana Enterprises Agency (Formerly NBSSI), UK- Ghana Chamber of Commerce, National Communications Authority 
-          (NCA), The Jospong Group, Zoomlion Ghana Limited, Tesah Capital, iWatch Africa, FactSpace West Africa, appsNmobile Solutions (Fintech), EIB Network 
-          (GhOne & StarrFM), OccupyGhana, Africa Women's Sports Summit, Yango Ghana, QualiTrace (AgriTech Startup), NewAge Agrimedia, GUBA Enterprise (UK & Ghana), 
-          Ghana Football Association Normalisation Committee, Mission89 (Switzerland), SpruseClean (USA), Thirdway Capital (Canada) and Ecodyst (USA). 
-        </p>
-
-        <br/>
-
-        <p style="text-align: justify";>  
-         
-          Secure your spot by registering below <strong>if you have not already registered for the first webinar</strong>:
-
-          <br />
-          
-          <a href="https://forms.gle/sQDCKpkhB7Mg1wvg8" target="_blank">https://forms.gle/sQDCKpkhB7Mg1wvg8</a>
-        </p>
-
-        <br />
-        <p  style="text-align: justify";>
-          For more information, contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
-      </p>
-
-
-    </div><!-- End Section news item --> 
-  
-    <!--  Section News item -->
-    <div id="news-item-1" class="container section-title" data-aos="fade-up">
-
-      <h2> The Art of Problem-Solving and Creativity in Mathematics </h2>
-      <p class="author-date">March 9, 2024</p>
-      <br/>
-
-      <img src="assets/img/webinar.jpeg" alt="webinar flyer" class="responsive-image">
-
-      <br/>
-
-        <p style="text-align: justify";> 
-            GHAIDEMS and AMI Ghana present the first of a three-day webinar series to celebrate the International Day of Mathematics (IDM 2024).
-        </p>
         
-        <br/>
+          <section id="services" class="services"> 
+            <div  class="container section-title" data-aos="fade-up">
+            <div class="row gy-4">
 
-        <p style="text-align: justify";>
-            GHAIDEMS and AMI Ghana are collaborating to bring you an unparalleled online event. This series is part of our commitment to highlighting the 
-            importance of mathematics in our everyday lives and its critical role in our future.
-        </p>
+              <!-- begin news item -->
+              <div class="col-md-12 col-sm-12 col-lg-12" id="news-item-3" data-aos="fade-up" data-aos-delay="200"> 
+               
+                <h2> Careers in Mathematics and How Playing Plays a Role </h2>
+                <p class="author-date">March 13, 2024</p>
+                </div>
+                
+                <br/>
+                
+                <div class="col-md-12 col-sm-12">
+                    <img src="assets/img/panel_flyer.jpg" alt="Panel Discusion Flyer" class="responsive-image">
 
-        <br/>
+                    <br /> 
 
-        <p style="text-align: justify";>
-            This event is perfect for students eager to deepen their mathematical knowledge, educators looking for innovative teaching methods, 
-            parents interested in supporting their children's education, and anyone curious about the role of mathematics in shaping our world.
-        </p>
-
-        <br/>
-
-        <p style="text-align: justify";>
-            Join us as we explore the vast world of mathematics through insightful discussions, engaging presentations, and interactive sessions. 
-            Our series aims to unveil the beauty and significance of mathematics, demonstrating its pivotal role in innovation, technology, and solving global challenges.
-        </p>
-
-        <br />
+                    <p style="text-align: justify";> data-aos="fade-up" data-aos-delay="200"
+                        GHAIDEMS and AMI Ghana present the third of a three-day webinar series to celebrate the International Day of Mathematics (IDM 2024).
+                        </p>
+                        
+                        <br/>
+                
+                        <p style="text-align: justify";>
+                        Join us for insightful discussions, engaging presentations, and a celebration of the beauty and significance of mathematics. 
+                        Whether you're a student, educator, parent or simply curious about math, this series is for you!
+                        </p>
+                
+                        <br/>
+                
+                        <h4> About the Panelists </h4>
+                        <br />
+                </div>
+                     
+                </div>
         
-        <h4> About the Speaker </h4>
-        <p style="text-align: justify";>
-        Dr. Bernard Oduoku Bainson is a lecturer at the Kwame Nkrumah​ University of Science and Technology, Kumasi and AIMS
-        Ghana. He was also the academic manager of AIMS Ghana.
-        He is a well-trained algebraist who applies the skill of abstraction of core structures, design and
-        verifiable strategies to solving problems. Have had years of experience in teaching across the various
-        levels of education in multicultural environments. Some of which are;
-        Tutoring the School of Mathematical and Computer Sciences, Heriot Watt University where
-        he assisted students with disabilities to access the best quality education provided by the university.
-        He also Volunteered as a Mathematics teacher at Agonaman Senior High School and continues to
-        volunteer to support the Allotey Maths camp. He did his masters at AIMS Ghana and his
-        undergraduate degree at University of Cape Coast.
-        </p>
               
-        <br/>
+        
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                      <img src="assets/img/franca_.jpeg" alt="Panel Discussion Flyer" class="panelist-image">
+                    </div>
+                    <div class="col-md-10 col-sm-12">
+                      <p style="text-align: left"> <strong> Moderator</strong> - Prof. Franca Hoffmann </p>
+                      <p style="text-align: justify";>
+                    Franca obtained her master’s in mathematics from Imperial College London (UK) and holds
+                    a PhD from the Cambridge Centre for Analysis at University of Cambridge (UK). She held
+                    the position of von Kármán instructor at Caltech from 2017 to 2020, then joined University of
+                    Bonn (Germany) as Junior Professor and Quantum Leap Africa in Kigali, Rwanda (African
+                    Institute for Mathematical Sciences) as AIMS-Carnegie Research Chair in Data Science,
+                    before arriving at the California Institute of Technology as Assistant Professor in 2022. She
+                    currently serves as AIMS International Scientific Advisor.
+                    Franca has co-organized numerous math and science outreach activities across the African
+                    continent for over a decade, from primary school activities to advanced research trainings.
+                    She serves as Director of the charity Supporting African Mathematics Initiatives (SAMI).
+                    </p>
+                    </div>
+                  </div>
+                  
+                  <br />
+        
+                  <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                      <img src="assets/img/Habiboulaye2.jpg" alt="Panel Discussion Flyer" class="panelist-image">
+                    </div>
+                    <div class="col-md-10 col-sm-12">
+                      <p style="text-align: left"> <strong> Industry Panelist Representative</strong> - Dr. Habiboulaye Amadou Boubacar </p>
+                      <p style="text-align: justify";>
+                        Dr. Habiboulaye is an experienced and accomplished professional in the field of Artificial Intelligence. He is the head 
+                        of the R&D Data Intelligence team at Air Liquide with the qualification of International Senior Expert (ISE). He has a PhD 
+                        in Machine Learning & Data Mining and over 16 years of experience in hands-on leading roles in AI. He has been managing the 
+                        implementation of various cutting-edge AI solutions through industrial and healthcare projects. He frequently maintains strong 
+                        collaborations with academic researchers and industrial experts to explore the next frontiers of AI. Alongside his contributions 
+                        in industry, he is also a lecturer for l’Université de Technologie de Troyes (UTT, France), Institut de Sciences Mathématiques et 
+                        Physiques (IMSP, Benin) and African Institute of Mathematical Sciences (AIMS). He is also the founder of the non-profit 
+                        organization AI4Africa.org.
+                    </p>
+                    </div>
+                  </div>
+        
+                  <br />
+        
+                  <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                      <img src="assets/img/photo_Herine-profile photo.jpg" alt="Panel Discussion Flyer" class="panelist-image">
+                    </div>
+                    <div class="col-md-10 col-sm-12">
+                      <p style="text-align: left"> <strong> Teacher Panelist Representative</strong> - Dr. Herine Otieno </p>
+                      <p style="text-align: justify";>
+                        Herine is a Pan African  educationist, researcher and budding Edu-entrepreneur.
+                        Her work straddles STEM Education, education technology & higher education teaching, learning & research. A mathematics major at 
+                        undergraduate, Herine first masters was in statistics.
+                        Her second Masters is in Social Sciences & her PhD is in mathematics education.
+                    </p>
+                    </div>
+                  </div>
+        
+                  <br />
+        
+                  <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                      <img src="assets/img/peter.jpg" alt="Panel Discussion Flyer" class="panelist-image">
+                    </div>
+                    <div class="col-md-10 col-sm-12">
+                      <p style="text-align: left"> <strong> Parent Panelist Representative</strong> - Dr. Peter Akayuure </p>
+                      <p style="text-align: justify";>
+                        Peter Akayuure is a devoted parent who is deeply passionate about fostering children's mathematical reasoning, creativity, 
+                        and problem-solving skills. Beyond providing academic support, Peter is committed to making his daughters participate in 
+                        workshops and events focused on applying mathematical concepts to real-life situations. His daughter was among few children 
+                        who participated in the Allotey Maths camp in 2022. Believing in the importance of aligning mathematics learning with cultural 
+                        experiences, he advocates for using games, puzzles, stories and real-life scenarios to nurture critical minds of children. 
+                        He is also an Associate Professor of Mathematics education at the University of Education Winneba. His research interests include 
+                        Geometry and spatial reasoning, assessment literacy, digital technologies, use of indigenous games to teach Mathematics and promote 
+                        STEM skills. As a parent and math educator, Peter loves to share his experience on how parents can support in nurturing their wards 
+                        to excel in mathematics beyond grades.
+                    </p>
+                    </div>
+                  </div>
+        
+                  <br />
+        
+                  <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                      <img src="assets/img/Adwoa.JPG" alt="Panel Discussion Flyer" class="panelist-image">
+                    </div>
+                    <div class="col-md-10 col-sm-12">
+                      <p style="text-align: left"> <strong> Student Panelist Representative</strong> - Ms. Adwoa Konadu Appiah </p>
+                      <p style="text-align: justify";>
+                        Adwoa was a 2016 Allotey Maths Camp participant and a former student of African Science Academy, where 
+                        she studied A-level physics, Mathematics and Further Mathematics. She went on to pursue her Barchelor's 
+                        degree in AI and Software Engineering at the University of Edinburgh and is currently pursuing a Software 
+                        Engineering career with TSB Bank in Scotland.
+        
+                    </p>
+                    </div>
+                  </div>
+        
+                  <br />
+        
+                  <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                      <img src="assets/img/Francis.jpeg" alt="Panel Discussion Flyer" class="panelist-image">
+                    </div>
+                    <div class="col-md-10 col-sm-12">
+                      <p style="text-align: left"> <strong> Education Initiatives Panelist Representative</strong> - Dr. Francis Feehi Torgbor </p>
+                      <p style="text-align: justify";>
+                        Francis is a climate data analyst with expertise in supporting the communication of climate information to farmers through 
+                        the Participatory Integrated Climate Services for Agriculture (PICSA) approach in Africa. He collaborates closely with meteorological 
+                        services in Africa to ensure the generation of quality data and climate analyses relevant for PICSA. Additionally, he is a 
+                        founding director of GHAIDEMS Ltd and the African Maths Initiative (AMI Ghana), an NGO. He is generally committed to promoting 
+                        mathematics education and research for nationwide development, fostering a positive mathematical culture in Africa.
+                    </p>
+                    </div>
+                  </div>
+        
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
 
-        <p style="text-align: justify";>  
-         
-        Secure your spot today by registering at <a href="https://forms.gle/sQDCKpkhB7Mg1wvg8" target="_blank">https://forms.gle/sQDCKpkhB7Mg1wvg8</a>. 
-        Please note that space is limited, and early registration is encouraged. 
-    
-        </p>
+                        <br/>
 
-        <br/>
+                        <p style="text-align: justify";>  
+                        
+                        Secure your spot by registering below <strong>if you have not already registered for the first webinar</strong>:
+                
+                        <br />
+                        
+                        <a href="https://forms.gle/sQDCKpkhB7Mg1wvg8" target="_blank">https://forms.gle/sQDCKpkhB7Mg1wvg8</a>
+                        </p>
+                
+                        <br />
+                        <p  style="text-align: justify";>
+                        For more information, contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
+                    </p>
 
-        <p  style="text-align: justify";>
-            For more information, please contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
-        </p>
+              </div> 
+              <!-- end news item -->
 
-    </div><!-- End Section news item --> 
+
+              <!-- begin news item -->
+              <div class="col-md-12 col-sm-12 col-lg-12" id="news-item-2" data-aos="fade-up" data-aos-delay="200"> 
+                <br />
+                <br />
+                <br />
+
+                <h2> Role of Mathematics in Technology and Innovation </h2>
+                <p class="author-date">March 12, 2024</p>
+                <br/>
+          
+                <img src="assets/img/webinar2.jpeg" alt="webinar flyer" class="responsive-image">
+          
+                <br/>
+          
+                  <p style="text-align: justify";> 
+                    GHAIDEMS and AMI Ghana present the second of a three-day webinar series to celebrate the International Day of Mathematics (IDM 2024).
+                  </p>
+                  
+                  <br/>
+          
+                  <p style="text-align: justify";>
+                    Join us for insightful discussions, engaging presentations, and a celebration of the beauty and significance of mathematics. Whether 
+                    you're a student, educator, parent or simply curious about math, this series is for you!
+                  </p>
+          
+                  <br/>
+          
+                  <h4> About the Speaker </h4>
+          
+                  <p  style="text-align: justify";>
+                    Mr. Divine Puplampu is a Technology Entrepreneur, Software Engineer, and Digital Marketing enthusiast with over 14 years of experience in 
+                    developing innovative digital solutions. He is currently a consulting General Manager at Stratcon Digital; a subsidiary of Stratcon 
+                    Energy & Trading a major Bulk Oil Distributor in Ghana.
+                  </p>
+          
+                  <br/>
+          
+                  <p  style="text-align: justify";>
+                    He is also the co-founder and Tech Lead at Stimuluz Technologies, where he leads a team of 8-developers to develop digital solutions. 
+                    He also had a stint at the University of Ghana Computing Systems (UGCS) during his National Service. At UGCS, he was part of the 5-man team 
+                    that deployed the Sakai E-learning System at the University of Ghana; the e-learning tool that became indispensable during the height of the COVID-19 
+                    pandemic. 
+                  </p>
+          
+                  <br/>
+          
+                  <p  style="text-align: justify";>
+                    Passionate about empowering the youth, particularly the Christian community, Divine regularly conducts free training sessions on leveraging 
+                    social media for positive impact. He also dedicates his time and skills as an IT Associate volunteer for several non-governmental organizations, 
+                    including the Ghana Community Radio Network (GCRN), Nneka Youth Foundation, FactSpace West Africa and the Rocky Dawuni Foundation. Divine also 
+                    volunteers as a Digital Media Enabler at the Trinity Baptist Church, Ghana, where he applies his expertise to enhance the church's digital presence. 
+                  </p>
+          
+                  <br/>
+          
+                  <p  style="text-align: justify";>
+                    With a strong commitment to utilizing technology to solve everyday challenges, Divine has contributed to over 100 digital projects for 
+                    various brands and startups across Africa. His client portfolio includes prominent organizations such as the Africa Continental Free Trade 
+                    Area Secretariat (AfCFTA), Center for Democratic Development (CDD), Prudential Life Insurance, Africa World Airlines, Nyaho Medical Centre, 
+                    Noguchi Memorial Institute for Medical Research, University of Ghana Business School, Omni Media (CitiFM & CitiTV), Ghana Chamber of Bulk 
+                    Oil Distributors (CBoD), Ghana Standards Authority, Ghana Climate Innovation Center, Petroleum Commission of Ghana, Ghana Tourism Authority, 
+                    Stratcon Energy & Trading Limited, Ghana Enterprises Agency (Formerly NBSSI), UK- Ghana Chamber of Commerce, National Communications Authority 
+                    (NCA), The Jospong Group, Zoomlion Ghana Limited, Tesah Capital, iWatch Africa, FactSpace West Africa, appsNmobile Solutions (Fintech), EIB Network 
+                    (GhOne & StarrFM), OccupyGhana, Africa Women's Sports Summit, Yango Ghana, QualiTrace (AgriTech Startup), NewAge Agrimedia, GUBA Enterprise (UK & Ghana), 
+                    Ghana Football Association Normalisation Committee, Mission89 (Switzerland), SpruseClean (USA), Thirdway Capital (Canada) and Ecodyst (USA). 
+                  </p>
+          
+                  <br/>
+          
+                  <p style="text-align: justify";>  
+                   
+                    Secure your spot by registering below <strong>if you have not already registered for the first webinar</strong>:
+          
+                    <br />
+                    
+                    <a href="https://forms.gle/sQDCKpkhB7Mg1wvg8" target="_blank">https://forms.gle/sQDCKpkhB7Mg1wvg8</a>
+                  </p>
+          
+                  <br />
+                  <p  style="text-align: justify";>
+                    For more information, contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
+                </p>
+              
+              </div> 
+              <!-- end news item -->
+
+              <!-- begin news item -->
+              <div class="col-md-12 col-sm-12 col-lg-12" id="news-item-1" data-aos="fade-up" data-aos-delay="200"> 
+                <br />
+                <br />
+                <br />
+
+                <h2> The Art of Problem-Solving and Creativity in Mathematics </h2>
+                <p class="author-date">March 9, 2024</p>
+                <br/>
+
+                <img src="assets/img/webinar.jpeg" alt="webinar flyer" class="responsive-image">
+          
+                <br/>
+          
+                  <p style="text-align: justify";> 
+                      GHAIDEMS and AMI Ghana present the first of a three-day webinar series to celebrate the International Day of Mathematics (IDM 2024).
+                  </p>
+                  
+                  <br/>
+          
+                  <p style="text-align: justify";>
+                      GHAIDEMS and AMI Ghana are collaborating to bring you an unparalleled online event. This series is part of our commitment to highlighting the 
+                      importance of mathematics in our everyday lives and its critical role in our future.
+                  </p>
+          
+                  <br/>
+          
+                  <p style="text-align: justify";>
+                      This event is perfect for students eager to deepen their mathematical knowledge, educators looking for innovative teaching methods, 
+                      parents interested in supporting their children's education, and anyone curious about the role of mathematics in shaping our world.
+                  </p>
+          
+                  <br/>
+          
+                  <p style="text-align: justify";>
+                      Join us as we explore the vast world of mathematics through insightful discussions, engaging presentations, and interactive sessions. 
+                      Our series aims to unveil the beauty and significance of mathematics, demonstrating its pivotal role in innovation, technology, and solving global challenges.
+                  </p>
+          
+                  <br />
+                  
+                  <h4> About the Speaker </h4>
+                  <p style="text-align: justify";>
+                  Dr. Bernard Oduoku Bainson is a lecturer at the Kwame Nkrumah​ University of Science and Technology, Kumasi and AIMS
+                  Ghana. He was also the academic manager of AIMS Ghana.
+                  He is a well-trained algebraist who applies the skill of abstraction of core structures, design and
+                  verifiable strategies to solving problems. Have had years of experience in teaching across the various
+                  levels of education in multicultural environments. Some of which are;
+                  Tutoring the School of Mathematical and Computer Sciences, Heriot Watt University where
+                  he assisted students with disabilities to access the best quality education provided by the university.
+                  He also Volunteered as a Mathematics teacher at Agonaman Senior High School and continues to
+                  volunteer to support the Allotey Maths camp. He did his masters at AIMS Ghana and his
+                  undergraduate degree at University of Cape Coast.
+                  </p>
+                        
+                  <br/>
+          
+                  <p style="text-align: justify";>  
+                  
+                  Secure your spot today by registering at <a href="https://forms.gle/sQDCKpkhB7Mg1wvg8" target="_blank">https://forms.gle/sQDCKpkhB7Mg1wvg8</a>. 
+                  Please note that space is limited, and early registration is encouraged. 
+              
+                  </p>
+          
+                  <br/>
+          
+                  <p  style="text-align: justify";>
+                      For more information, please contact us at <a href="mailto:info@ghaidems.org">info@ghaidems.org</a> 
+                  </p>
+              
+              </div> 
+              <!-- end news item -->
+                
+              
+            </div>
+        
+            </div>
+        
+          </section><!-- End news container -->
+          </main>
+      </div>
+      
+      <!-- Sidebar -->
+      <div class="col-12 col-md-2">
+        <div class="sidebar-sticky">
+          <br />
+          <br />
+          <br />
+          <br />
+
+             <!-- Search Bar -->
+            <div class="search-container">
+              <input type="text" id="newsSearch" onkeyup="filterNews()" placeholder="Search news...">
+            </div>
+                
+                <ul class="nav flex-column" id="newsLinks">
+                    <li class="nav-item">
+                    <a class="nav-link" href="#news-item-3">
+                        Careers in Mathematics and How Playing Plays a Role
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#news-item-2">
+                        Role of Mathematics in Technology and Innovation
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#news-item-1">
+                        The Art of Problem-Solving and Creativity in Mathematics
+                    </a>
+                    </li>
+                </ul>
+                
+          </div>
+      </div>
   
-  </section><!-- End Team Section -->
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <br />
-    <br />
-    <br />
-    <br />
-    <!-- Search Bar -->
-    <div class="search-container">
-      <input type="text" id="newsSearch" onkeyup="filterNews()" placeholder="Search news...">
-    </div>
-
-    <!-- News Links Container -->
-    <div class="news-links" id="newsLinks">
-      <a href="#news-item-3" class="sidebar-link">Careers in Mathematics and How Playing Plays a Role</a>
-      <a href="#news-item-2" class="sidebar-link">Role of Mathematics in Technology and Innovation</a>
-      <a href="#news-item-1" class="sidebar-link">The Art of Problem-Solving and Creativity in Mathematics</a>
-      <!-- Additional news items as needed -->
     </div>
   </div>
-   
-  </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -599,22 +629,23 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
   <script>
     function filterNews() {
-    var input = document.getElementById("newsSearch");
-    var filter = input.value.toUpperCase();
-    var newsLinksContainer = document.getElementById("newsLinks");
-    var newsItems = newsLinksContainer.getElementsByTagName("a");
-    for (var i = 0; i < newsItems.length; i++) {
-      var txtValue = newsItems[i].textContent || newsItems[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        newsItems[i].style.display = "";
-      } else {
-        newsItems[i].style.display = "none";
+      var input = document.getElementById("newsSearch");
+      var filter = input.value.toUpperCase();
+      var newsLinksContainer = document.getElementById("newsLinks");
+      var newsItems = newsLinksContainer.getElementsByTagName("li"); // Change from 'a' to 'li'
+      for (var i = 0; i < newsItems.length; i++) {
+        var a = newsItems[i].getElementsByTagName("a")[0]; // Get the 'a' tag within the 'li' item
+        var txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          newsItems[i].style.display = ""; // Show the 'li' item
+        } else {
+          newsItems[i].style.display = "none"; // Hide the 'li' item
+        }
       }
     }
-  }
   </script>
+  
 </body>
 </html>

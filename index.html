@@ -91,6 +91,7 @@
 
   </style>
 </head>
+
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
   <br />
   <div class="container-fluid">  
@@ -340,7 +341,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    document.getElementById('confetti-hover').addEventListener('mouseenter', function() {
+    window.addEventListener('load', function() {
       confetti({
         particleCount: 100,
         spread: 70,

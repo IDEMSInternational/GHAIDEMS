@@ -53,12 +53,13 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  margin: 0;
 }
 
 a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 a:hover {
@@ -76,11 +77,31 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.about{
+  max-width: 1200px;
+  margin: auto;
+}
+
+
 section {
   color: var(--default-color);
-  background-color: var(--background-color);
   padding: 60px 0;
-  overflow: clip;
+  overflow: hidden;
+}
+
+.index-page {
+  margin: 0;
+  padding: 0;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* optional fallback */
+  z-index: -1; /* keeps it behind all content */
 }
 
 /*--------------------------------------------------------------
@@ -116,6 +137,20 @@ section {
 
 .section-title p {
   margin-bottom: 0;
+}
+
+.about-text-container {
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 60px 40px;
+}
+
+.about-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -255,6 +290,7 @@ section {
   --secondary-color: #ffffff;
   --nav-color: #008B8B;
   --nav-hover-color: #ffffff;
+  margin: 0;
 }
 
 /* Home Page Custom Header on page scroll

@@ -97,7 +97,7 @@
   <div class="container-fluid">  
     <div class="row">
       <!-- Page Content -->
-      <div class="col-12 col-md-10">
+      <div >
         <!-- Page content here -->
         <div class="content-wrapper">
             <!-- Header -->
@@ -123,33 +123,27 @@
             </header><!-- End Header -->
         </div>
         
-          <main id="main">
-            <br />
-            <br />
-            <br />
-
-          
-        <section id="about" class="about">
-        
-            <div class="container" id="confetti-hover" data-aos="fade-up" data-aos-delay="100"> 
-              
-              <div class="row">
-                <div class="col-lg-10">
-                  <p data-aos="fade-up" data-aos-delay="200" class="responsive-text"> <strong>Ghana Innovations in Development, Education and the Mathematical Sciences</strong> </p>
+        <main class="body-content" id="main">
+          <div id="particles-js"></div>
+          <section id="about" class="about">
+            <div class="container" id="confetti-hover" data-aos="fade-up" data-aos-delay="100">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-5 d-flex align-items-center justify-content-center" id="about-text-header">
+                  <p class="responsive-text" style="text-align: center;">
+                    <strong>Ghana Innovations in Development, Education and the Mathematical Sciences</strong>
+                  </p>
                 </div>
-        
-                <p style="text-align: justify;">
-                  GHAIDEMS is legally registered in Ghana as a for-profit organization, however our structure and constitution defines us as a sort of
-                   social enterprise. This enables us to be defined by the communities we serve while doing business commercially. Serving a community
-                   gives us a sense of purpose beyond our own as individuals or a company. 
-                </p>
-        
-                </div> 
-            </div>
-        
+                <div class="col-md-1"></div>
+                <div class="col-12 col-md-6 about-text-container" id="about-text">
+                  <p class="about-text">
+                    GHAIDEMS is legally registered in Ghana as a for-profit organization, however our structure and constitution define us as a sort of social enterprise. This enables us to be defined by the communities we serve while doing business commercially. Serving a community gives us a sense of purpose beyond our own as individuals or a company.
+                  </p>
+                </div>
+              </div>
+            </div>        
           </section>
-        
-        
+
+          <!-- End About Section -->
           <section id="services" class="services">
             <div class="container">
         
@@ -213,11 +207,11 @@
             </div>
         
           </section><!-- End Services Section -->
-          </main>
+        </main>
       </div>
       
       <!-- Sidebar -->
-      <div class="col-12 col-md-2">
+      <div >
             <br />
             <br />
             <br />
@@ -350,5 +344,14 @@
       });
     });
   </script>
+
+  <!-- Live Animated Background -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', 'assets/constants/particles.json', function() {
+    console.log('Particles.js config loaded successfully.');
+  });
+</script>
+
 </body>
 </html>

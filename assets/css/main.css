@@ -141,7 +141,7 @@ section {
 
 .about-text-container {
   text-align: justify;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 60px 40px;
 }
 
@@ -152,6 +152,7 @@ section {
   color: #333333;
   width: 100%;
 }
+
 
 /*--------------------------------------------------------------
 # Page Title & Breadcrumbs
@@ -1062,6 +1063,11 @@ section {
   }
 }
 
+.responsive-text {
+  font-size: 48px !important;
+  font-weight: 600 !important;
+}
+
 /* Stats Section - Home Page
 ------------------------------*/
 .stats {
@@ -1120,6 +1126,11 @@ section {
 
 /* Services Section - Home Page
 ------------------------------*/
+.services {
+  background-color: var(--background-color);
+  width: 100%;
+}
+
 .services .service-item {
   position: relative;
   padding-top: 40px;
@@ -1193,6 +1204,134 @@ section {
   line-height: 24px;
   font-size: 14px;
 }
+
+.card {
+  height: 12cm;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.card :hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* News Carousel */
+.card-wrapper {
+  position: relative;
+  padding: 0 60px; /* gives horizontal breathing space */
+  overflow: hidden;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color);
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next {
+  right: -40px;
+}
+
+.swiper-button-prev {
+  left: -40px;
+}
+
+.card-image {
+  width: 100%;
+  max-width: 650px;         /* sets an upper limit so it doesn't get too big; keeps image ratio */
+  object-fit: contain;        /* ensures image fills nicely without stretching */
+  border-radius: 10px;      /* optional for smoother corners */
+  display: block;
+  margin: 0 auto;           /* centers it horizontally */
+}
+
+.card-item:hover {
+  cursor: pointer;
+}
+
+.card-list .card-item {
+  list-style: none;
+}
+
+.card-list .card-item .card-link {
+  --card-background: rgba(35, 41, 47, 0.4);
+  user-select: none;
+  /* width: 400px; */
+  /* height: 500px; */
+  margin: 20px;
+  display: block;
+  background-color: var(--card-background);
+  padding: 22px;
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+  top: -5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
+}
+
+.card-link .card-list .card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.19rem;
+  font-weight: 600;
+  color: var(--contrast-color);
+  margin: 22px 0 8px 0;
+  width: 100%;
+  transition: color 0.3s ease;
+}
+
+.card-title:hover {
+  color: var(--primary-color);
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  background: var(--nav-dropdown-hover-color);
+  opacity: 0.7;
+  height: 12px;
+  width: 12px;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--primary-color);
+}
+
+.card-wrapper .swiper-slide-button {
+  color: var(--primary-color);
+  margin-top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-wrapper {
+    margin: 0 5px 15px;
+  }
+  .card-wrapper .swiper-slide-button{
+    display: none;
+  }
+
+  .card-list .card-item .card-link {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    margin: 15px 0 5px 0;
+  }
 
 /* Features Section - Home Page
 ------------------------------*/

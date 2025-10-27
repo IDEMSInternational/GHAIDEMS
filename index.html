@@ -31,6 +31,12 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Linking SwiperJS CSS -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
   <style>
 
 @media (max-width: 992px) {
@@ -91,12 +97,13 @@
 
   </style>
 </head>
+
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
   <br />
   <div class="container-fluid">  
     <div class="row">
       <!-- Page Content -->
-      <div class="col-12 col-md-10">
+      <div >
         <!-- Page content here -->
         <div class="content-wrapper">
             <!-- Header -->
@@ -122,41 +129,33 @@
             </header><!-- End Header -->
         </div>
         
-          <main id="main">
-            <br />
-            <br />
-            <br />
-
-          
-        <section id="about" class="about">
-        
-            <div class="container" id="confetti-hover" data-aos="fade-up" data-aos-delay="100"> 
-              
-              <div class="row">
-                <div class="col-lg-10">
-                  <p data-aos="fade-up" data-aos-delay="200" class="responsive-text"> <strong>Ghana Innovations in Development, Education and the Mathematical Sciences</strong> </p>
+        <main class="body-content" id="main">
+          <div id="particles-js"></div>
+          <section id="about" class="about">
+            <div class="container" id="confetti-hover" data-aos="fade-up" data-aos-delay="100">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-5 d-flex align-items-center justify-content-center" id="about-text-header">
+                  <h1 class="responsive-text" style="text-align: center;">
+                    <strong">Ghana Innovations in Development, Education and the Mathematical Sciences</strong>
+                  </h1>
                 </div>
-        
-                <p style="text-align: justify;">
-                  GHAIDEMS is legally registered in Ghana as a for-profit organization, however our structure and constitution defines us as a sort of
-                   social enterprise. This enables us to be defined by the communities we serve while doing business commercially. Serving a community
-                   gives us a sense of purpose beyond our own as individuals or a company. 
-                </p>
-        
-                </div> 
-            </div>
-        
+                <div class="col-md-1"></div>
+                <div class="col-12 col-md-6 about-text-container" id="about-text">
+                  <p class="about-text">
+                    GHAIDEMS is legally registered in Ghana as a for-profit organization, however our structure and constitution define us as a sort of social enterprise. This enables us to be defined by the communities we serve while doing business commercially. Serving a community gives us a sense of purpose beyond our own as individuals or a company.
+                  </p>
+                </div>
+              </div>
+            </div>        
           </section>
-        
-        
+
+          <!-- End About Section -->
           <section id="services" class="services">
             <div class="container">
-        
               <div class="row gy-4">
-                
-              <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-                <article>
-                    <div class="card" style="height: 8cm;">
+                <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                  <article>
+                    <div class="card">
                       <div class="card-body text-center">
                         <i class="fas fa-rocket service-icon"></i>
                         <h4 class="card-title" style="color: #008B8B;">Innovation</h4>
@@ -169,7 +168,7 @@
         
                 <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
                   <article>
-                    <div class="card" style="height: 8cm;">
+                    <div class="card">
                       <div class="card-body text-center">
                         <i class="bi bi-globe service-icon" style="font-size: 4rem; color: #008B8B;"></i> 
                         <h4 class="card-title" style="color: #008B8B;">Development</h4>
@@ -184,7 +183,7 @@
                 
                 <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
                   <article>
-                    <div class="card" style="height: 8cm;">
+                    <div class="card">
                       <div class="card-body text-center">
                         <i class="fas fa-book-open service-icon"></i>
                         <h4 class="card-title" style="color: #008B8B;">Education</h4>
@@ -196,7 +195,7 @@
                 
                 <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
                   <article>
-                    <div class="card" style=" height: 8cm;">
+                    <div class="card">
                       <div class="card-body text-center">
                         <i class="fas fa-calculator service-icon"></i> 
                         <h4 class="card-title" style="color: #008B8B;">Mathematical Sciences</h4>
@@ -205,18 +204,72 @@
                     </div>
                   </article>
                 </div>
-                
-                
               </div>
-        
             </div>
-        
-          </section><!-- End Services Section -->
-          </main>
+          </section>
+          <!-- End Services Section -->
+          
+          <section>
+            <div class="container swiper">
+              <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                  <li class="card-item swiper-slide">
+                    <a href="https://www.ghaidems.org/news.html#news-item-8" class="card-link">
+                      <img src="assets/img/frank farris.jpg" alt="Card Image" class="card-image">
+                      <h5 class="card-title">IDM 2025 Webinar Series - Talk Four: It Starts With A Circle.</h5>
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="https://www.ghaidems.org/news.html#news-item-7" class="card-link">
+                      <img src="assets/img/David Reimann.jpg" alt="Card Image" class="card-image">
+                      <h5 class="card-title">IDM 2025 Webinar Series - Talk Three: Geometric Patterns from Positive Integers.</h5>
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="https://www.ghaidems.org/news.html#news-item-6" class="card-link">
+                      <img src="assets/img/Edmund Harriss.jpg" alt="Card Image" class="card-image">
+                      <h5 class="card-title">IDM 2025 Webinar Series - Talk Two: Making art with mathematics: How we can see and feel abstract ideas</h5>
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="https://www.ghaidems.org/news.html#news-item-5" class="card-link">
+                      <img src="assets/img/BRUCE.jpg" alt="Card Image" class="card-image">
+                      <h5 class="card-title">IDM 2025 Webinar Series - Talk One </h5>
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="https://www.ghaidems.org/news.html#news-item-3" class="card-link">
+                      <img src="assets/img/panel_flyer.jpg" alt="Card Image" class="card-image">
+                      <h5 class="card-title">Careers in Mathematics and How Playing Plays a Role</h5>
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="https://www.ghaidems.org/news.html#news-item-2" class="card-link">
+                      <img src="assets/img/webinar2.jpeg" alt="Card Image" class="card-image">
+                      <h5 class="card-title">Role of Mathematics in Technology and Innovation</h5>
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="https://www.ghaidems.org/news.html#news-item-1" class="card-link">
+                      <img src="assets/img/webinar.jpeg" alt="Card Image" class="card-image">
+                      <h5 class="card-title">The Art of Problem-Solving and Creativity in Mathematics</h5>
+                    </a>
+                  </li>
+                </ul>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-slide-button swiper-button-next"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
       
       <!-- Sidebar -->
-      <div class="col-12 col-md-2">
+      <!-- <div >
             <br />
             <br />
             <br />
@@ -274,7 +327,7 @@
                 </li>
             </ul>
             </div>
-        </div>
+      </div> -->
   
     </div>
   </div>
@@ -308,7 +361,7 @@
           </ul>
         </div>
 
-         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>GHAIDEMS Ltd Ghana</p>
           <p>Hse No. C50/26</p>
@@ -349,15 +402,19 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    document.getElementById('confetti-hover').addEventListener('mouseenter', function() {
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ['#FF0000', '#FFFF00', '#00FF00', '#000000'] // confetti colors
-      });
-    });
-  </script>
+
+  <!-- Live Animated Background -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', 'assets/scripts/particles.json', function() {
+    console.log('Particles.js config loaded successfully.');
+  });
+</script>
+
+<!-- Linking SwiperJS Script -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> -->
+
+<!-- Linking Custom Script -->
+<script src="assets/scripts/swiperScript.js"></script>
 </body>
 </html>

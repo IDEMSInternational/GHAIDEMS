@@ -1327,7 +1327,7 @@ section {
   margin-top: -35px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {}
   .card-wrapper {
     margin: 0 5px 15px;
   }

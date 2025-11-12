@@ -42,6 +42,118 @@
       transition: color 0.3s ease-in-out; /* Smooth transition for text color */
     }
 
+    /* ABOUT US STYLES */
+    .about-content {
+      display: flex;
+      align-items: center; /* aligns items at the top */
+      justify-content: space-between; /* space between columns */
+      gap: 2rem; /* spacing between title and text */
+      flex-wrap: wrap; /* makes it responsive */
+    }
+
+    .about-title {
+      flex: 1; /* takes up equal width on large screens */
+      min-width: 200px; /* ensures column doesn’t shrink too small */
+    }
+
+    .about-text {
+      flex: 2; /* makes the paragraph wider */
+      min-width: 300px;
+    }
+
+    .about h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      text-align: justify;
+      line-height: 1.8;
+      color: #fff;
+      font-size: 1.3rem;
+    }
+
+/* OUR VISION STYLES */
+  .vision-section {
+    padding: 30px 0;
+    width: 100%;
+  }
+
+  .vision-title h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    position: relative;
+    justify-self: end;
+  }
+
+  /* Remove decorative lines from title */
+  .vision-title h2::before,
+  .vision-title h2::after {
+    content: none !important;
+  }
+
+  /* Optional alignment styling */
+  .vision-section .content p {
+    margin: 0;
+    text-align: left;
+    color: #333;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    padding-right: 45px;
+  }
+
+  .point-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .point-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two equal columns */
+    gap: 2rem; /* space between columns */
+    margin-top: 1.5rem;
+  }
+
+  .item {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .item h3 {
+    font-size: 2rem;
+    color: #585757;
+    margin-bottom: 0.5rem;
+  }
+
+  /* MISSION STYLES  */
+  .mission {
+    margin-bottom: 20px;
+  }
+
+  .staffing-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two equal columns */
+    gap: 1.5rem; /* space between columns */
+    margin-top: 1.5rem;
+    padding: 40px 60px;
+  }
+
+  .section-title h2::before,
+  .section-title h2::after {
+    content: none !important;
+  }
+
+  .staffing {
+    padding-left: 30px;
+  }
+
+  .staffing-text {
+    text-align: justify;
+  }
   </style>
 
 </head>
@@ -80,200 +192,199 @@
 <main id="main">
 <br>
 <br>
-    <!-- About Section -->
-    <section id="about" class="about">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="container section-title" data-aos="fade-up">
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="about-content">
+        <div class="about-title">
           <h2>About Us</h2>
-            <p style="text-align: justify;">GHAIDEMS is a multi-disciplinary team with long term experience working in education and development, 
-              who are looking to have a greater impact across Africa. Our origins in academia have given us an appreciation of deep understanding 
-              and knowledge, which translates into a preference for long term collaborations rather than quick fixes.
-              Our drive for impact leads us to search for practical solutions rather than ivory tower studies.
-            </p>
-        </div><!-- End Section Title -->    
+        </div>
+        <div class="about-text">
+          <p>
+            GHAIDEMS is a multi-disciplinary team with long term experience working in education and development,
+            who are looking to have a greater impact across Africa. Our origins in academia have given us an appreciation
+            of deep understanding and knowledge, which translates into a preference for long term collaborations rather than quick fixes.
+            Our drive for impact leads us to search for practical solutions rather than ivory tower studies.
+          </p>
+        </div>
       </div>
+    </div>
+  </section><!-- End About Section -->
 
-    </section><!-- End About Section -->
+  <!-- Services Section - Home Page -->
+  <section id="services" class="services">
+    <div class="container section-title" data-aos="fade-up">
+      <section id="faq" class=" vision-section">
+        <div class="row align-items-center" data-aos="fade-up" data-aos-delay="100">
 
-    <!-- Services Section - Home Page -->
-    <section id="services" class="services">
-
-      <!--  Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Vision</h2>
-        <section id="faq" class="faq">
-          <!-- <div class="container"> -->
-            <div class="row gy-4">
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="content px-xl-5">
-                  <h3><span>Vision</span></h3> 
-                  <p style="text-align: justify; font-weight: 450; font-style: normal; font-size: medium;">
-                    Our vision is Impacting  Grand Challenges: complex developmental issues which are resistant to simple interventions and often termed "wicked problems. </p>
-                </div>
-              </div>
-    
-              <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-    
-                <div class="faq-container">
-                  <div class="faq-item faq-active">
-                      <div class="faq-content">
-                      <p>GHAIDEMS suggests the following ways to impact  these challenges 
-                      </div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-    
-                  <div class="faq-item">
-                    <h3><span>Accepting complexity:</span></h3>
-                    <div class="faq-content">
-                      <p style="text-align: justify;">By adopting this approach, GHAIDEMS seeks to eliminate instant solutions and encourages the adoption of a comprehensive, transdisciplinary approach to interventions.</div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-    
-                  <div class="faq-item">
-                    <h3> <span>Building incrementally:</span></h3>
-                    <div class="faq-content">
-                      <p style="text-align: justify;">Interventions should be viewed as sequential progressions, with each step building upon prior experience and creating additional opportunities whenever feasible.</p>
-                    </div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-    
-                  <div class="faq-item">
-                    <h3> <span>Explicitly coherent:</span></h3>
-                    <div class="faq-content">
-                      <p style="text-align: justify;">Accepting the time it takes to build solutions to such complex challenges, it is essential to have clear communications of the underlying thought process and principles to enable consistency.</p>
-                    </div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-                     
-                </div>
-    
-              </div>
-            </div>
-          <!-- </div> -->
-        </section> <!-- End Faq Section-->
-
-        <h2>Mission</h2>
-        <p style="text-align: justify;">GHAIDEMS works in partnership with a diverse range of collaborators  to foster the growth of innovations that have the potential to improve lives worldwide. 
-        </p>  
-
-        <h4 >Social Mission</h4>
-        <p style="text-align: justify;">GHAIDEMS being a social enterprise, is guided by a social mission that can be divided into three main components.</p>
-         </div>
-
-         <div class="container">
-            <div class="row gy-4">
-      
-              <!-- <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <article>
-
-                  <div class="post-img">
-                    <img src="assets/img/innovation.jpg" alt="" class="img-fluid">
-                  </div>
-                  <p class="title"><a href="#" class="stretched-link">Innovation</a></p>
-                  <h6 class="title">
-                    <a>Our approach is to strive for innovations, embracing contextualised problem solving which we strive to work with partners to build capacity to ensure sustainability.
-                    </a>
-                  </h6>
-                </article>
-              </div> --> 
-              <!-- End post list item -->
-
-              <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <article>
-      
-                <div class="card" style="width: 22rem; height: 10cm;">
-                  <img class="card-img-top" style="height: 6cm;" src="assets/img/group_pic.jpeg" alt="Card image cap">
-                  <div class="card-body">
-                    <h4 class="card-title" style="color: #008B8B;">Development</h4>
-                    <p class="card-text">We facilitate the growth of innovations that enhance the quality of life.</p>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                  </div>
-                </div>
-                </article>
-              </div><!-- End post list item -->
-
-
-              <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <article>
-      
-                <div class="card" style="width: 22rem; height: 10cm;;">
-                  <img class="card-img-top" style="height: 6cm" src="assets/img/allotey_mathcamp.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <h4 class="card-title" style="color: #008B8B;">Education</h4>
-                    <p class="card-text">We strive to positively influence the professional and academic outcomes of education systems, even in challenging environments.</p>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                  </div>
-                </div>
-                </article>
-              </div><!-- End post list item -->
-
-
-
-              <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <article>
-
-              <div class="card" style="width: 22rem; height: 10cm;">
-                <img class="card-img-top" style="height: 6cm" src=" assets/img/innovation.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title" style="color: #008B8B;">Mathematical Sciences</h4>
-                  <p class="card-text">We seek to enhance the mathematical sciences as both a discipline and a means for effecting social change.</p>
-                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
-              </div>
-              </article>
-            </div><!-- End post list item -->
-            </div>
+          <!-- Left Column: Title -->
+          <div class="col-lg-3 col-md-12 vision-title order-2 order-lg-2">
+            <h2>Our Vision</h2>
           </div>
 
-          <br />
+          <!-- Right Column: Text -->
+          <div class="col-lg-9 col-md-12 vision-content order-1 order-lg-1">
+            <div class="content">
+              <p>
+                Our vision is Impacting Grand Challenges — complex developmental issues 
+                which are resistant to simple interventions and often termed "wicked problems".
+              </p>
+              <br>
+              <p>
+                GHAIDEMS suggests the following ways to impact  these challenges 
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Vision Points -->
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="point-container">
+          <div class="item">
+            <h3><span>Accepting complexity:</span></h3>
+            <div class="point-content">
+              <p style="text-align: justify;">By adopting this approach, GHAIDEMS seeks to eliminate instant solutions and encourages the adoption of a comprehensive, transdisciplinary approach to interventions.</div>
+          </div><!-- End Faq item -->
 
-           <!--  Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2> Staffing Model</h2>
-          <p style="text-align: justify";>GHAIDEMS staffing model strives  to  implement a uniform  approach for all contributors, regardless of their skill level or geographic location.
+          <div class="item">
+            <h3> <span>Building incrementally:</span></h3>
+            <div class="point-content">
+              <p style="text-align: justify;">Interventions should be viewed as sequential progressions, with each step building upon prior experience and creating additional opportunities whenever feasible.</p>
+            </div>
+          </div><!-- End Faq item -->
+
+          <div class="item">
+            <h3> <span>Explicitly coherent:</span></h3>
+            <div class="point-content">
+              <p style="text-align: justify;">Accepting the time it takes to build solutions to such complex challenges, it is essential to have clear communications of the underlying thought process and principles to enable consistency.</p>
+            </div>
+          </div> <!-- End Faq item -->     
+        </div> <!-- End point container -->
+      </div>
+    </div>
+  </section> <!-- End Vision Section -->
+
+  <!-- Mission Section -->
+  <section id="about" class="about mission">
+    <div class="container" data-aos="fade-up" data-aos-delay="100" style="background-color: rgb(185, 189, 189)">
+      <div class="about-content" >
+        <div class="about-title" >
+          <h2 style="color: #333;">Mission</h2>
+        </div>
+        <div class="about-text">
+          <p style="color: #333;">
+            GHAIDEMS works in partnership with a diverse range of collaborators  to foster the growth of innovations that have the potential to improve lives worldwide. 
+            GHAIDEMS being a social enterprise, is guided by a social mission that can be divided into three main components.
           </p>
-        </div><!-- End Section Title -->
-  
-        <div class="container">
-          <h4><strong>Principles</strong></h4>
-         <p>The staffing model is built  on the following principles:</p>
-          <br>
-          <h6><strong><span class="num">&#9642;</span> <span>Individual initiative:</span></strong></h6>
-                  <div class="faq-content">
-                    <p>GHADEMS seeks to foster a culture which supports individual initiative whenever feasible. This does not only pertain to professional initiative, but also the overall environment of the workplace.</p>
-                  </div>
-          <h6><strong><span class="num">&#9642;</span> <span>Collective responsibility:</span></strong></h6>
-                  <div class="faq-content">
-                    <p>This includes both the collaboration on projects and a  collective action to support the wellbeing of employees.</p>
-                  </div>
-          <h6><strong><span class="num">&#9642;</span> <span>Satisfying need not greed:</span></strong></h6>
-                  <div class="faq-content">
-                    <p>GHAIDEMS seeks to attract and retain employees who are motivated by factors beyond just financial gain.</p>
-                  </div>
-          <h6><strong><span class="num">&#9642;</span> <span>Respecting diversity:</span></strong></h6>
-                  <div class="faq-content">
-                    <p>GHAIDEMS endeavours to enable a diverse workforce to achieve their personal and collective potential. Both the company and its employees acknowledge the difficulties, intricacies, and obstacles that diversity can bring, and are willing to make the necessary trade-offs while acknowledging the importance of diversity.</p>
-                  </div>        
-                </div>
-                <br>
-             
-       <div class="container">
-          <h4><strong>Staff types</strong></h4>
-              <p>The staffing model is intended to apply equally across two major staff types:</p>
-              <p>Full/part time employees.</p>
-              <p>Interns.</p>
-       </div>
-       <br>
-        <div class="container">
-            <h4><strong>Working Conditions </strong></h4>
-              <p style="text-align: justify";>GHAIDEMS will strive to establish a flexible work environment that motivates employees to establish their own work schedule whenever feasible.
-              However, employees are required to be highly mindful and committed to their responsibilities, ensuring that their decisions do not disproportionately affect the company.</p>
-                  </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End About Section -->
 
-    </section> <!-- End Services Section -->
-   
+  <div class="container mt-5 card-container" >
+    <div class="row gy-4" >
+
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <article>
+
+        <div class="card" style="width: 22rem; height: 10.5cm;">
+          <img class="card-img-top" style="height: 6cm;" src="assets/img/group_pic.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #008B8B;">Development</h4>
+            <p class="card-text">We facilitate the growth of innovations that enhance the quality of life.</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        </article>
+      </div><!-- End post list item -->
+
+
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <article>
+
+        <div class="card" style="width: 22rem; height: 10.5cm;;">
+          <img class="card-img-top" style="height: 6cm" src="assets/img/allotey_mathcamp.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #008B8B;">Education</h4>
+            <p class="card-text">We strive to positively influence the professional and academic outcomes of education systems, even in challenging environments.</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        </article>
+      </div><!-- End post list item -->
+
+
+
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <article>
+
+      <div class="card" style="width: 22rem; height: 10.5cm;">
+        <img class="card-img-top" style="height: 6cm" src=" assets/img/innovation.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title" style="color: #008B8B;">Mathematical Sciences</h4>
+          <p class="card-text">We seek to enhance the mathematical sciences as both a discipline and a means for effecting social change.</p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+      </article>
+    </div><!-- End post list item -->
+    </div>
+  </div>
+
+  <br />
+
+    <!-- Staffing Model -->
+    <!--  Section Title -->
+    <div class="staffing-container mt-90">
+      <div class="container section-title order-lg-2 order-2" data-aos="fade-up">
+        <h2 style="font-size: 2.5rem; margin-top: 120px;"> Staffing Model</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container order-1 order-lg-1">
+        <p style="text-align: justify";>
+          GHAIDEMS staffing model strives  to  implement a uniform  approach for all contributors, regardless of their skill level or geographic location.
+        </p>
+        <br>
+        <h4><strong>Principles</strong></h4>
+        <p>The staffing model is built  on the following principles:</p>
+        <div class="staffing">
+        <h6><strong><span class="num">&#9642;</span> <span>Individual initiative:</span></strong></h6>
+        <div class="faq-content">
+          <p class="staffing-text">GHADEMS seeks to foster a culture which supports individual initiative whenever feasible. This does not only pertain to professional initiative, but also the overall environment of the workplace.</p>
+        </div>
+        <h6><strong><span class="num">&#9642;</span> <span>Collective responsibility:</span></strong></h6>
+            <div class="faq-content">
+              <p class="staffing-text">This includes both the collaboration on projects and a  collective action to support the wellbeing of employees.</p>
+            </div>
+        <h6><strong><span class="num">&#9642;</span> <span>Satisfying need not greed:</span></strong></h6>
+        <div class="faq-content">
+          <p class="staffing-text">GHAIDEMS seeks to attract and retain employees who are motivated by factors beyond just financial gain.</p>
+        </div>
+        <h6><strong><span class="num">&#9642;</span> <span>Respecting diversity:</span></strong></h6>
+        <div class="faq-content">
+          <p class="staffing-text">GHAIDEMS endeavours to enable a diverse workforce to achieve their personal and collective potential. Both the company and its employees acknowledge the difficulties, intricacies, and obstacles that diversity can bring, and are willing to make the necessary trade-offs while acknowledging the importance of diversity.</p>
+        </div>  
+        </div>
+        <br>
+        <div>
+          <h4><strong>Staff types</strong></h4>
+          <p>The staffing model is intended to apply equally across two major staff types:</p>
+          <div class="staffing">
+            <p><span class="num">&#9642;</span> <span>Full/part time employees. </span></p>
+            <p><span class="num">&#9642;</span> <span> Interns. </span></p>
+          </div>
+        </div>
+        <br>
+        <div>
+          <h4><strong>Working Conditions </strong></h4>
+          <p style="text-align: justify";>
+            GHAIDEMS will strive to establish a flexible work environment that motivates employees to establish their own work schedule whenever feasible.
+            However, employees are required to be highly mindful and committed to their responsibilities, ensuring that their decisions do not disproportionately affect the company.
+          </p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- ======= Footer ======= -->

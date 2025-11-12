@@ -110,6 +110,7 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 60px;
+  /* display: block; */
 }
 
 .section-title h2 {
@@ -142,7 +143,7 @@ section {
 .about-text-container {
   text-align: justify;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 60px 40px;
+  /* padding: 60px 40px; */
 }
 
 .about-text {
@@ -960,6 +961,16 @@ section {
 ------------------------------*/
 .about {
   --background-color: #f4f4f4;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.about .container {
+  padding: 60px 100px !important;
+  margin: auto !important;
+  max-width: 100% !important;
+  background-color: #008B8B;
 }
 
 .about .content h3 {
@@ -971,10 +982,10 @@ section {
   color: var(--primary-color);
   border-radius: 7px;
   display: inline-block;
-}
+}s
 
 .about .content h2 {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .about .content p:last-child {
@@ -1129,6 +1140,7 @@ section {
 .services {
   background-color: var(--background-color);
   width: 100%;
+  /* display: flex; */
 }
 
 .services .service-item {
@@ -1698,7 +1710,7 @@ section {
 }
 
 .faq .content p {
-  font-size: 15px;
+  font-size: 28px;
   color: rgba(var(--default-color-rgb), 0.7);
 }
 

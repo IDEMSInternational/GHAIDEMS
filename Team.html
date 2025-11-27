@@ -126,23 +126,22 @@
     margin: 2rem 5rem;
   }
 
-  .landscape-layout {
+  /* .landscape-layout {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0;
-  }
+  } */
 
-  .directors-layout {
+  /* .directors-layout {
     display: flex;
     align-items: flex-start;
     margin: 0;
     padding: 0 !important;
-  }
+  } */
 
   .left-title {
     justify-content: center;
     align-self: flex-start;
-    transform: rotate(90deg);
     padding-left: 80px;
     padding-top: 0 !important;
   }
@@ -189,10 +188,11 @@
 
   .horizontal-display {
     display: grid;
-    grid-template-columns: 270px 270px 270px; /* fixed width */
+    grid-template-columns: 320px 320px 320px; /* fixed width */
     gap: 2rem;
     padding: 0 !important;
-    margin: 0 !important;
+    padding-left: 60px !important;
+    justify-content: center;
   }
 
   </style>
@@ -249,11 +249,11 @@
       <hr class="divider">
   
       <div class="container no-spacing">
-        <div class="row gy-5 landscape-layout directors-layout">
-          <div class="col-lg-1 col-md-2 left-title">
+        <div class="gy-5 landscape-layout directors-layout">
+          <div class="left-title" style="margin-bottom: 50px;">
             <h3 class="team-header">Directors</h3>
           </div>
-          <div class="col-lg-10 col-md-10 horizontal-layout">
+          <div class="horizontal-layout">
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/evelyn.jpeg" class="team-image" alt="">
@@ -355,11 +355,11 @@
         <hr class="team-divider">
 
         <div class="row gy-5 landscape-layout directors-layout">  
-          <div class="row-cols-lg-1 col-md-2 left-title">
+          <div class="left-title">
             <h3 class="team-header">Management</h3>
           </div>
 
-          <div class="horizontal-display col-lg-10 col-md-10">
+          <div class="horizontal-display">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-card">
                 <div class="image-overlay-wrapper">
@@ -520,10 +520,10 @@
         <hr class="team-divider">
 
         <div class="row gy-5 landscape-layout directors-layout">  
-          <div class="col-lg-1 col-md-2 left-title">
+          <div class="left-title">
             <h3 class="team-header">Interns</h3>
           </div>
-          <div class="col-lg-10 col-md-10 horizontal-layout">  
+          <div class="horizontal-layout">  
 
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
               <div class="image-overlay-wrapper">
@@ -532,7 +532,7 @@
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-x-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <a href="https://www.linkedin.com/in/derrick-agorhom-5684b3217/" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                   <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
@@ -544,12 +544,12 @@
                 <h4>Derrick Agorhom</h4>
                 <span>Intern</span>
                 <p style="text-align: justify";>Derrick Agorhom is a software developer and graphic designer. 
-                  He has a background in Computer Science and Mathematics. His primary focus revolves around crafting innovative systems and 
-                  applications that tackle real-world challenges through 
-                  <i id="more9" style="display:none;">technology.
-                    Additionally, Derrick's enthusiasm extends to data science, where he delves into extensive datasets to derive informed insights and 
-                    predictions. Derrick likes reading.
-                  </i>
+                He has a background in Computer Science and Mathematics. His primary focus revolves around crafting innovative systems and 
+                applications that tackle real-world challenges through 
+                <i id="more9" style="display:none;">technology.
+                  Additionally, Derrick's enthusiasm extends to data science, where he delves into extensive datasets to derive informed insights and 
+                  predictions. Derrick likes reading.
+                </i>
                 </p>
                   <a href="javascript:toggleText('link9', 'more9', 'less9')" id="link9">Read More</a>
                   <a href="javascript:toggleText('link9', 'more9', 'less9')" id="less9" style="display:none;">Read Less</a>  
@@ -560,10 +560,10 @@
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/eafrifa.jpg" class="team-image" alt="">
                 <div class="social-icons-container">
-                  <a href="https://twitter.com/yourusername" target="https://x.com/Emma33712365" class="social-icon">
+                  <a href="https://x.com/Emma33712365" target="_blank" class="social-icon">
                     <i class="fab fa-x-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/yourusername" target="https://www.linkedin.com/in/emmanuel-afrifa-840674214/" class="social-icon">
+                  <a href="https://www.linkedin.com/in/emmanuel-afrifa-840674214/" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                   <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
@@ -595,7 +595,7 @@
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-x-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <a href="www.linkedin.com/in/eunice-dickson-b2b4a1272" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                   <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">

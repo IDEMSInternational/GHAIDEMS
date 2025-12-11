@@ -24,78 +24,176 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
-
-
-
-
-.member-info p, .member-info p i {
-  font-size: 14px; 
-  text-align: justify;
-  font-style: normal; 
-  color: black;
-}
-
-
-
-.col-lg-4.col-md-6 {
-  position: relative;
-  text-align: center; /* Ensures text is centered below the image */
-}
-
-.image-overlay-wrapper {
-  position: relative;
-  display: inline-block; /* Fits the wrapper size to the image */
-  margin-bottom: 15px; /* Space below the image wrapper */
-}
-
-.team-image {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto; /* Centers the image horizontally */
-}
-
-.social-icons-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%; /* Matches image border-radius */
-  visibility: hidden; /* Initially hidden */
-}
-
-.image-overlay-wrapper:hover .social-icons-container {
-  opacity: 1; /* Shows on hover */
-  visibility: visible; /* Becomes visible */
-}
-
-.social-icon {
-  margin: 0 10px;
-  color: #FFFFFF;
-  font-size: 20px;
-}
-
-@media (max-width: 768px) {
-  .team-image {
-    width: 180px;
-    height: 180px;
+  .header-title {
+    color: #008B8B;
   }
-}
+
+  .member-info p, .member-info p i {
+    font-size: 14px; 
+    text-align: justify;
+    font-style: normal; 
+    color: black;
+  }
+
+  .col-lg-4.col-md-6 {
+    position: relative;
+    text-align: center; /* Ensures text is centered below the image */
+  }
+
+  .image-overlay-wrapper {
+    position: relative;
+    display: inline-block; /* Fits the wrapper size to the image */
+    margin-bottom: 15px; /* Space below the image wrapper */
+  }
+
+  .team-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+  }
+
+  .social-icons-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%; /* Matches image border-radius */
+    visibility: hidden; /* Initially hidden */
+  }
+
+  .image-overlay-wrapper:hover .social-icons-container {
+    opacity: 1; /* Shows on hover */
+    visibility: visible; /* Becomes visible */
+  }
+
+  .social-icon {
+    margin: 0 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .team-image {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  .horizontal-layout {
+    display: flex;
+    align-items: flex-start; /* Align text at the top */
+    gap: 2rem; /* space between title and paragraph */
+    padding: 0 !important;
+  }
+
+  .horizontal-layout h2 {
+    white-space: nowrap; /* prevents "Team" from breaking */
+    margin: 0 100px;
+  }
+
+  .horizontal-layout p {
+    flex: 1; /* paragraph takes remaining space */
+    margin: 0;
+    text-align: justify;
+  }
+
+  /* Remove decorative lines from title */
+  .section-title h2::before,
+  .section-title h2::after {
+    content: none !important;
+  }
+
+  .divider {
+    border: 0;
+    height: 1px;
+    background-color: rgb(12, 14, 16);
+    margin: 2rem 5rem;
+  }
+
+  /* .landscape-layout {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  } */
+
+  /* .directors-layout {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0 !important;
+  } */
+
+  .left-title {
+    justify-content: center;
+    align-self: flex-start;
+    padding-left: 80px;
+    padding-top: 0 !important;
+  }
+
+  /* Make it stack on mobile */
+  @media (max-width: 768px) {
+    .directors-layout {
+      flex-direction: column;
+    }
+  }
+
+  .team-header {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #008B8B;
+  }
+
+  .no-spacing {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 70px !important;
+    margin-right: 50px !important;
+  }
+
+  .team-divider {
+    border: 0;
+    height: 1px;
+    background-color: rgb(12, 14, 16);
+    margin: 1rem 0;
+  }
+
+  .columns-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 2rem; /* space between items */
+  }
+
+  .member-card {
+    display: flex;
+    flex-direction: column; /* stack image + text vertically */
+    align-items: center;    /* optional: center horizontally */
+  }
+
+  .horizontal-display {
+    display: grid;
+    grid-template-columns: 320px 320px 320px; /* fixed width */
+    gap: 2rem;
+    padding: 0 !important;
+    padding-left: 60px !important;
+    justify-content: center;
+  }
 
   </style>
 
@@ -133,30 +231,35 @@
   </header><!-- End Header -->
 
   <main id="main">
-<br>
-<br>
+    <br>
+    <br>
     <!-- Hero Section - Home Page -->
-     <!-- Team Section - Home Page -->
-     <section id="team" class="team">
+    <!-- Team Section - Home Page -->
+    <section id="team" class="team">
+    <!--  Section Title -->
+      <div class="container section-title horizontal-layout" data-aos="fade-up">
+        <h2 class="header-title">Our Team</h2>
+        <p style="text-align: justify";>
+          We are a small team with a diverse set of skills and experiences. What draws us together is a
+          passion for development and a strong belief in achieving impact over maximizing personal gain. We are based across the world with flexible working arrangements including full and part time
+          employees, collaborators and advisors. 
+        </p>
+      </div><!-- End Section Title -->
 
-        <!--  Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Team</h2>
-          <p style="text-align: justify";>We are a small team with a diverse set of skills and experiences. What draws us together is a
-            passion for development and a strong belief in achieving impact over maximising personal gain. We are based across the world with flexible working arrangements including full and part time
-            employees, collaborators and advisors. </p>
-        </div><!-- End Section Title -->
+      <hr class="divider">
   
-        <div class="container">
-          
-          <div class="row gy-5">
-            <h3>Directors</h3>
+      <div class="container no-spacing">
+        <div class="gy-5 landscape-layout directors-layout">
+          <div class="left-title" style="margin-bottom: 50px;">
+            <h3 class="team-header">Directors</h3>
+          </div>
+          <div class="horizontal-layout">
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/evelyn.jpeg" class="team-image" alt="">
                 <div class="social-icons-container">
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-x-twitter"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
@@ -169,25 +272,26 @@
               <div class="member-info text-center">
                 <h4>Evelyn Arthur-Anto</h4>
                 <span>Director</span>
-                <p style="text-align: justify";>Evelyn Arthur Anto is an MPhil graduate in Mathematics from the University of Cape Coast and
-                  a product of the African Institute for Mathematical Sciences.  She excels as both a researcher and educator in Mathematics,<i id="more1" style="display:none;"> 
+                <p style="text-align: justify";>
+                  Evelyn Arthur Anto is an MPhil graduate in Mathematics from the University of Cape Coast and a product of the African Institute for Mathematical Sciences.  She excels as both a researcher and educator in Mathematics,
+                  <i id="more1" style="display:none;"> 
                   with research interests ranging from the human genome to developing
                   mathematical models for societal challenges. One of  such research works is developing mathematical models and algorithms for accurate gestational age predictions using ultrasound images. 
-                    Additionally, her current focus is on using Mathematical models for cancer diagnosis and survival time predictions. As an educator, 
-                    Evelyn engages young learners with enthusiasm, utilizing games and puzzles to make mathematics practical and accessible.
-                     Her independence and creativity further enhance her capabilities. </i> 
+                  Additionally, her current focus is on using Mathematical models for cancer diagnosis and survival time predictions. As an educator, 
+                  Evelyn engages young learners with enthusiasm, utilizing games and puzzles to make mathematics practical and accessible.
+                  Her independence and creativity further enhance her capabilities. </i> 
               </p>
                   <a href="javascript:toggleText('link1', 'more1', 'less1')" id="link1">Read More</a>
                   <a href="javascript:toggleText('link1', 'more1', 'less1')" id="less1" style="display:none;">Read Less</a>
               </div>
             </div><!-- End Team Member -->
-  
+
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/Francis.JPG" class="team-image" alt="">
                 <div class="social-icons-container">
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-x-twitter"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
@@ -214,13 +318,13 @@
                   <a href="javascript:toggleText('link2', 'more2', 'less2')" id="less2" style="display:none;">Read Less</a>
               </div>
             </div><!-- End Team Member -->
-  
+
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/Nana_new (1).jpeg" class="team-image" alt="">
                 <div class="social-icons-container">
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-x-twitter"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
@@ -230,7 +334,7 @@
                   </a>
                 </div>
               </div>
-             
+            
               <div class="member-info text-center">
                 <h4>Nana Adjoah Mbroh</h4>
                 <span>Director</span>
@@ -245,44 +349,55 @@
                   <a href="javascript:toggleText('link3', 'more3', 'less3')" id="less3" style="display:none;">Read Less</a>
               </div>
             </div><!-- End Team Member -->
-  
-            <h3>Management Members</h3>
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-              <div class="image-overlay-wrapper">
-                <img  src="assets/img/team/carl. A.JPG" class="team-image" alt="">
-                <div class="social-icons-container">
-                  <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
+          </div>
+        </div>
+
+        <hr class="team-divider">
+
+        <div class="row gy-5 landscape-layout directors-layout">  
+          <div class="left-title">
+            <h3 class="team-header">Management</h3>
+          </div>
+
+          <div class="horizontal-display">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-card">
+                <div class="image-overlay-wrapper">
+                  <img  src="assets/img/team/carl. A.JPG" class="team-image" alt="">
+                  <div class="social-icons-container">
+                    <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                      <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </div>
+                </div>  
+                <div class="member-info text-center">
+                  <h4>Carl Ayitey Ayayee-Adade</h4>
+                  <span>Education Team Lead</span>
+                  <p style="text-align: justify";>Carl Ayitey Ayayee-Adade is a devoted Mathematics tutor at the senior high school level in the Ghana Education Service (GES). As a co-founder of STEMfinite 
+                    Education Network and the program coordinator of African Maths Initiative (AMI Ghana),
+                    <i id="more4" style="display:none;"> he collaborates with others to demystify the 
+                    teaching and learning of Mathematics in Ghana, making it engaging for students. He has a strong background in the Mathematical Sciences, 
+                    Industrial Mathematics and Education. is passionately curious, versatile, self-motivated with research interests in teaching methodologies 
+                    and Biomathematical modelling. He is also an enthusiast of Data Science and Machine Learning.</i>
+                  </p>
+                  <a href="javascript:toggleText('link4', 'more4', 'less4')" id="link4">Read More</a>
+                  <a href="javascript:toggleText('link4', 'more4', 'less4')" id="less4" style="display:none;">Read Less</a>
                 </div>
-              </div>  
-              <div class="member-info text-center">
-                <h4>Carl Ayitey Ayayee-Adade</h4>
-                <span>Education Team Lead</span>
-                <p style="text-align: justify";>Carl Ayitey Ayayee-Adade is a devoted Mathematics tutor at the senior high school level in the Ghana Education Service (GES). As a co-founder of STEMfinite 
-                  Education Network and the program coordinator of African Maths Initiative (AMI Ghana),
-                   <i id="more4" style="display:none;"> he collaborates with others to demystify the 
-                  teaching and learning of Mathematics in Ghana, making it engaging for students. He has a strong background in the Mathematical Sciences, 
-                  Industrial Mathematics and Education. is passionately curious, versatile, self-motivated with research interests in teaching methodologies 
-                  and Biomathematical modelling. He is also an enthusiast of Data Science and Machine Learning.</i>
-                </p>
-                <a href="javascript:toggleText('link4', 'more4', 'less4')" id="link4">Read More</a>
-                <a href="javascript:toggleText('link4', 'more4', 'less4')" id="less4" style="display:none;">Read Less</a>
-              </div>
+            </div>
             </div><!-- End Team Member -->
             
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="image-overlay-wrapper">
                 <img  src="assets/img/team/gifty.jpeg" class="team-image" alt="">
                 <div class="social-icons-container">
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-x-twitter"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
@@ -304,13 +419,13 @@
                 <a href="javascript:toggleText('link5', 'more5', 'less5')" id="less5" style="display:none;">Read Less</a> 
               </div>
             </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/John.jpg" class="team-image" alt="">
                 <div class="social-icons-container">
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-x-twitter"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
@@ -327,20 +442,20 @@
                   learning, data science and climatic data analysis.  He is passionate about using data, statistics, data science, and machine learning to help 
                   <i id="more6" style="display:none;">African rainfed farmers. His current 
                     research is around improving satellite rainfall estimates in the African rainfed setting.
-                   He enjoys community building and is involved with AI Ghana as a co-founder and the president. John likes travelling, 
-                   listening to music and writing.</i>
+                  He enjoys community building and is involved with AI Ghana as a co-founder and the president. John likes travelling, 
+                  listening to music and writing.</i>
                 </p>
                   <a href="javascript:toggleText('link6', 'more6', 'less6')" id="link6">Read More</a>
                   <a href="javascript:toggleText('link6', 'more6', 'less6')" id="less6" style="display:none;">Read Less</a> 
               </div>
             </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/Nicholas.jpg" class="team-image" alt="">
                 <div class="social-icons-container">
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-x-twitter"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
@@ -369,13 +484,13 @@
               <a href="javascript:toggleText('link7', 'more7', 'less7')" id="less7" style="display:none;">Read Less</a> 
               </div>
             </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/Patrick.JPG" class="team-image" alt="">
                 <div class="social-icons-container">
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-x-twitter"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
@@ -393,21 +508,31 @@
                 <i id="more8" style="display:none;"> environmental research initiatives and projects.
                   His ultimate aspiration is to persistently make a positive impact by advocating for sustainable water resources 
                   management and striving to create a better world to live in.
-                 </i>
+                </i>
                 </p>
                   <a href="javascript:toggleText('link8', 'more8', 'less8')" id="link8">Read More</a>
                   <a href="javascript:toggleText('link8', 'more8', 'less8')" id="less8" style="display:none;">Read Less</a>  
               </div>
             </div><!-- End Team Member -->
-  
+          </div>
+        </div>
+
+        <hr class="team-divider">
+
+        <div class="row gy-5 landscape-layout directors-layout">  
+          <div class="left-title">
+            <h3 class="team-header">Interns</h3>
+          </div>
+          <div class="horizontal-layout">  
+
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/Derick.jpeg" class="team-image" alt="">
                 <div class="social-icons-container">
                   <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-x-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <a href="https://www.linkedin.com/in/derrick-agorhom-5684b3217/" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                   <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
@@ -419,12 +544,12 @@
                 <h4>Derrick Agorhom</h4>
                 <span>Intern</span>
                 <p style="text-align: justify";>Derrick Agorhom is a software developer and graphic designer. 
-                  He has a background in Computer Science and Mathematics. His primary focus revolves around crafting innovative systems and 
-                  applications that tackle real-world challenges through 
-                  <i id="more9" style="display:none;">technology.
-                    Additionally, Derrick's enthusiasm extends to data science, where he delves into extensive datasets to derive informed insights and 
-                    predictions. Derrick likes reading.
-                  </i>
+                He has a background in Computer Science and Mathematics. His primary focus revolves around crafting innovative systems and 
+                applications that tackle real-world challenges through 
+                <i id="more9" style="display:none;">technology.
+                  Additionally, Derrick's enthusiasm extends to data science, where he delves into extensive datasets to derive informed insights and 
+                  predictions. Derrick likes reading.
+                </i>
                 </p>
                   <a href="javascript:toggleText('link9', 'more9', 'less9')" id="link9">Read More</a>
                   <a href="javascript:toggleText('link9', 'more9', 'less9')" id="less9" style="display:none;">Read Less</a>  
@@ -435,10 +560,10 @@
               <div class="image-overlay-wrapper">
                 <img src="assets/img/team/eafrifa.jpg" class="team-image" alt="">
                 <div class="social-icons-container">
-                  <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                  <a href="https://x.com/Emma33712365" target="_blank" class="social-icon">
+                    <i class="fab fa-x-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                  <a href="https://www.linkedin.com/in/emmanuel-afrifa-840674214/" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                   <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
@@ -460,16 +585,47 @@
                   <a href="javascript:toggleText('link10', 'more10', 'less10')" id="link10">Read More</a>
                   <a href="javascript:toggleText('link10', 'more10', 'less10')" id="less10" style="display:none;">Read Less</a>    
               </div>
+
             </div><!-- End Team Member -->
-  
+
+            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+              <div class="image-overlay-wrapper">
+                <img src="assets/img/team/Eunice.jpg" class="team-image" alt="">
+                <div class="social-icons-container">
+                  <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                    <i class="fab fa-x-twitter"></i>
+                  </a>
+                  <a href="www.linkedin.com/in/eunice-dickson-b2b4a1272" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="member-info text-center">
+                <h4>Eunice Dickson</h4>
+                <span>Intern</span>
+                <p style="text-align: justify";> 
+                  Eunice Dickson is a final-year student at the University of Ghana, Legon, pursuing a degree in Mathematics and Computer Science. Her academic and professional interests lie at the intersection of software engineering and machine learning, 
+                  <i id="more11" style="display:none;">
+                  where she is passionate about developing data-driven and scalable digital solutions.
+                  Eunice’s technical expertise spans backend development using Node.js and Express.js, mobile application development with React Native, and frontend technologies such as React, HTML, CSS, and JavaScript. She is also proficient in Python and its key data science libraries, including NumPy, Pandas, Matplotlib, and Scikit-Learn.
+                  Through her work, Eunice is committed to leveraging technology and data-driven innovation to advance education and sustainable development in Africa—values that strongly align with GHAIDEMS’ mission to create practical, impactful solutions to complex challenges across the continent.
+                  </i>
+                </p>
+                  <a href="javascript:toggleText('link11', 'more11', 'less11')" id="link11">Read More</a>
+                  <a href="javascript:toggleText('link11', 'more11', 'less11')" id="less11" style="display:none;">Read Less</a>    
+              </div>
+            </div><!-- End Team Member -->
+
           </div>
-  
         </div>
-  
-      </section><!-- End Team Section -->
+        
+    </section><!-- End Team Section -->
   
     <!-- Faq Section - Home Page -->
-   
+  
   </main>
 
   <!-- ======= Footer ======= -->
@@ -501,7 +657,7 @@
           </ul>
         </div>
 
-         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>GHAIDEMS Ltd Ghana</p>
           <p>Hse No. C50/26</p>
@@ -542,7 +698,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
- <script>
+<script>
 function toggleText(linkId, moreId, lessId) {
     var moreText = document.getElementById(moreId);
     var readMoreLink = document.getElementById(linkId);

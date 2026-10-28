@@ -1,1 +1,1 @@
-This is for the GHAIDEMS website
+This is the official GHAIDEMS website
